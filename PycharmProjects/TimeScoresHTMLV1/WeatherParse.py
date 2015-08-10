@@ -28,3 +28,6 @@ def forecast(n):
     high = fc.find("yweather:forecast")['high']
 
     return("Today (%s) : %s, %s-%s" % (day, text, low, high))
+
+
+####FIX BROKEN LOOPS HERE!!!####
