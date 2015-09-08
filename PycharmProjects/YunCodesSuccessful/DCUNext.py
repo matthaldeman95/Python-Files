@@ -9,12 +9,14 @@ print(soup.prettify())
 nextmatch = soup.find("span", attrs={"class": "match_summary "}).contents
 nextstr = str(nextmatch)
 foo, next, bar = nextstr.split("'")
+day, date, year = next.split(",")
 nextvs = soup.find("span", attrs={"class": "match_summary versus"}).contents
 vsstr = str(nextvs)
 foo, vs, bar = vsstr.split("'")
 timeloc = soup.find("div", attrs={"class": "match_info"}).contents
 timestr = str(timeloc)
 foo, time, bar = timestr.split('"')
-print("DCU Next Match: %s %s %s" % (next, vs, time))
+short = time[:6]
+print("DCU Next Match: %s,%s %s%s" % (day, date, vs, short))
 
 

@@ -12,9 +12,10 @@ foo, next, bar = nextstr.split("'")
 nextvs = soup.find("span", attrs={"class": "match_summary versus"}).contents
 vsstr = str(nextvs)
 foo, vs, bar = vsstr.split("'")
-timeloc = soup.find("div", attrs={"class": "match_info"}).contents
-timestr = str(timeloc)
-foo, time, bar = timestr.split('"')
-print("DCU Next Match: %s %s %s" % (next, vs, time))
+timeloc = str(soup.find("div", attrs={"class": "match_info"}).contents)
+print timeloc
+
+#foo, time, bar = timestr.split('"')
+#print("DCU Next Match: %s %s %s" % (next, vs, time))
 
 
