@@ -1,3 +1,4 @@
+__author__ = 'Matt'
 #!/usr/bin/python
 import BeautifulSoup
 import newurllib2
@@ -30,13 +31,4 @@ date = date.strip()
 m, d = date.split(" ")
 d = int(d)
 
-today = datetime.date.today()
-today = today.day
-
-print("Rank: %s, Record: %s" % (rank, newrec))
-print(" ")
-if(d == today):
-    print("Next game: Today, %s" % (time))
-else:
-    print("Next game: %s, %s, %s" % (day, date, time))
-
+print("Steelers (%s, %s) Next Game: %s, %s,%s" % (rank, newrec, day, date, time))
