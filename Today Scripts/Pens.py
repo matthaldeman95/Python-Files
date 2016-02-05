@@ -47,7 +47,10 @@ elif re.search(day, 'Sun'):
     day = "Sunday"
 
 date = date.strip()
-m, d = date.split("  ")
+if re.search(date, '  '):
+    m, d = date.split("  ")
+else:
+    m, d = date.split(" ")
 m = m.strip();
 d = d.strip()
 d = int(d)
