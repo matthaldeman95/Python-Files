@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.4.0 (1530 thorn-02.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <bounds minlat="52.7229855" minlon="-1.9006348" maxlat="52.7296391" maxlon="-1.8896484"/>
+ <node id="190733081" visible="true" version="1" changeset="431254" timestamp="2007-12-26T18:15:37Z" user="blackadder" uid="735" lat="52.7285865" lon="-1.9042162">
+  <tag k="created_by" v="JOSM"/>
+ </node>
+ <node id="190733040" visible="true" version="4" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7288510" lon="-1.9066631"/>
+ <node id="190733055" visible="true" version="3" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7290696" lon="-1.9058847"/>
+ <node id="190733085" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7285586" lon="-1.9040238"/>
+ <node id="190733094" visible="true" version="4" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7292012" lon="-1.9022739"/>
+ <node id="190733089" visible="true" version="3" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7287841" lon="-1.9032798"/>
+ <node id="190733101" visible="true" version="4" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7293727" lon="-1.9016366"/>
+ <node id="190733106" visible="true" version="3" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7293818" lon="-1.9010004"/>
+ <node id="190733045" visible="true" version="4" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7289306" lon="-1.9064179"/>
+ <node id="190733050" visible="true" version="4" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7290086" lon="-1.9061513"/>
+ <node id="584202628" visible="true" version="1" changeset="3337926" timestamp="2009-12-09T23:18:45Z" user="blackadder" uid="735" lat="52.7241189" lon="-1.8887394"/>
+ <node id="1276832710" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:50Z" user="blackadder" uid="735" lat="52.7360411" lon="-1.8997354">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276832751" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:51Z" user="blackadder" uid="735" lat="52.7005927" lon="-1.9084258">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276832773" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:51Z" user="blackadder" uid="735" lat="52.7450147" lon="-1.9122211">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276832825" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:52Z" user="blackadder" uid="735" lat="52.7196587" lon="-1.8946763">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276832873" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:52Z" user="blackadder" uid="735" lat="52.7410787" lon="-1.9053589">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276832881" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:52Z" user="blackadder" uid="735" lat="52.7047756" lon="-1.9031325">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276832942" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:53Z" user="blackadder" uid="735" lat="52.7268252" lon="-1.8938244">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276832755" visible="true" version="2" changeset="17723966" timestamp="2013-09-07T21:05:02Z" user="lcmortensen" uid="341519" lat="52.6900185" lon="-1.9467305">
+  <tag k="power" v="tower"/>
+ </node>
+ <node id="1276832997" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:54Z" user="blackadder" uid="735" lat="52.7106926" lon="-1.8980264">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276833063" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:55Z" user="blackadder" uid="735" lat="52.7328481" lon="-1.8961867">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276832969" visible="true" version="2" changeset="10204489" timestamp="2011-12-26T04:20:34Z" user="BrummieBloke" uid="498071" lat="52.7516397" lon="-1.9113042">
+  <tag k="power" v="tower"/>
+ </node>
+ <node id="1276833024" visible="true" version="3" changeset="22531222" timestamp="2014-05-24T20:30:15Z" user="James Derrick" uid="22643" lat="52.7469755" lon="-1.9114910">
+  <tag k="power" v="tower"/>
+ </node>
+ <node id="1276833087" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:55Z" user="blackadder" uid="735" lat="52.6987558" lon="-1.9113149">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276833095" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:55Z" user="blackadder" uid="735" lat="52.7164169" lon="-1.8950840">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276833118" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:55Z" user="blackadder" uid="735" lat="52.7437143" lon="-1.9100365">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276833174" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:56Z" user="blackadder" uid="735" lat="52.7386454" lon="-1.9026151">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276833190" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:56Z" user="blackadder" uid="735" lat="52.7028983" lon="-1.9047506">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276833218" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:57Z" user="blackadder" uid="735" lat="52.6954278" lon="-1.9164660">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276833240" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:57Z" user="blackadder" uid="735" lat="52.7234447" lon="-1.8942268">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276833276" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:58Z" user="blackadder" uid="735" lat="52.7076781" lon="-1.9006082">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276833315" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:11:59Z" user="blackadder" uid="735" lat="52.7302846" lon="-1.8934272">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276833331" visible="true" version="1" changeset="8080443" timestamp="2011-05-08T09:12:00Z" user="blackadder" uid="735" lat="52.7137068" lon="-1.8954289">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="BING"/>
+ </node>
+ <node id="1276833322" visible="true" version="2" changeset="17723966" timestamp="2013-09-07T21:05:02Z" user="lcmortensen" uid="341519" lat="52.6926016" lon="-1.9375153">
+  <tag k="power" v="tower"/>
+ </node>
+ <node id="1276833333" visible="true" version="2" changeset="17723966" timestamp="2013-09-07T21:05:02Z" user="lcmortensen" uid="341519" lat="52.6826088" lon="-1.9482671">
+  <tag k="power" v="tower"/>
+ </node>
+ <node id="1276832853" visible="true" version="2" changeset="9421627" timestamp="2011-09-28T18:14:52Z" user="brianboru" uid="9065" lat="52.6946230" lon="-1.9243729">
+  <tag k="power" v="tower"/>
+ </node>
+ <node id="1276832964" visible="true" version="2" changeset="9421627" timestamp="2011-09-28T18:14:52Z" user="brianboru" uid="9065" lat="52.6937334" lon="-1.9332562">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="bing"/>
+ </node>
+ <node id="1276833255" visible="true" version="2" changeset="9421627" timestamp="2011-09-28T18:14:52Z" user="brianboru" uid="9065" lat="52.6942031" lon="-1.9288298">
+  <tag k="power" v="tower"/>
+  <tag k="source" v="bing"/>
+ </node>
+ <node id="584127575" visible="true" version="2" changeset="9619674" timestamp="2011-10-21T20:49:42Z" user="chexum" uid="104856" lat="52.7237986" lon="-1.8885200"/>
+ <node id="190733199" visible="true" version="3" changeset="14130044" timestamp="2012-12-02T20:19:47Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7289285" lon="-1.8851625"/>
+ <node id="1276833260" visible="true" version="3" changeset="13234709" timestamp="2012-09-24T15:31:59Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7486621" lon="-1.9105870">
+  <tag k="power" v="tower"/>
+ </node>
+ <node id="190733065" visible="true" version="2" changeset="13700495" timestamp="2012-10-31T14:47:16Z" user="Proud Salopian" uid="63121" lat="52.7289966" lon="-1.9051244"/>
+ <node id="190733069" visible="true" version="2" changeset="13700495" timestamp="2012-10-31T14:47:17Z" user="Proud Salopian" uid="63121" lat="52.7288709" lon="-1.9049511"/>
+ <node id="190733073" visible="true" version="2" changeset="13700495" timestamp="2012-10-31T14:47:17Z" user="Proud Salopian" uid="63121" lat="52.7286617" lon="-1.9045515"/>
+ <node id="190733076" visible="true" version="2" changeset="13700495" timestamp="2012-10-31T14:47:17Z" user="Proud Salopian" uid="63121" lat="52.7286071" lon="-1.9043884"/>
+ <node id="190733072" visible="true" version="2" changeset="13700495" timestamp="2012-10-31T14:47:17Z" user="Proud Salopian" uid="63121" lat="52.7287474" lon="-1.9047355"/>
+ <node id="190733062" visible="true" version="3" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7290635" lon="-1.9053756"/>
+ <node id="190733059" visible="true" version="3" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7290632" lon="-1.9055666"/>
+ <node id="1995732734" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7293370" lon="-1.9018829"/>
+ <node id="190733128" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7294410" lon="-1.8976203"/>
+ <node id="190733116" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7294559" lon="-1.8994759"/>
+ <node id="190733194" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7288881" lon="-1.8859039"/>
+ <node id="190733155" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7285781" lon="-1.8907399"/>
+ <node id="190733161" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7286369" lon="-1.8893414"/>
+ <node id="190733164" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7287376" lon="-1.8890324"/>
+ <node id="190733149" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7289956" lon="-1.8931201"/>
+ <node id="190733133" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7294182" lon="-1.8971407"/>
+ <node id="190733173" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7290677" lon="-1.8882701"/>
+ <node id="190733154" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7286028" lon="-1.8912238"/>
+ <node id="190733157" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7285638" lon="-1.8896675"/>
+ <node id="190733097" visible="true" version="3" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7293276" lon="-1.9020647"/>
+ <node id="190733182" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7291015" lon="-1.8872868"/>
+ <node id="190733124" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7294770" lon="-1.8981278"/>
+ <node id="190733135" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7293000" lon="-1.8955636"/>
+ <node id="190733153" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7287422" lon="-1.8918675"/>
+ <node id="190733177" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7290878" lon="-1.8879064"/>
+ <node id="190733190" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7289485" lon="-1.8864092"/>
+ <node id="190733144" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:07Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7291252" lon="-1.8938775"/>
+ <node id="190733187" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7290446" lon="-1.8868668"/>
+ <node id="190733168" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7289150" lon="-1.8886349"/>
+ <node id="190733087" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7285950" lon="-1.9037722"/>
+ <node id="190733120" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7294595" lon="-1.8988595"/>
+ <node id="190733111" visible="true" version="3" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7294172" lon="-1.9002633"/>
+ <node id="190733140" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7292253" lon="-1.8947246"/>
+ <node id="584202646" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7268674" lon="-1.8897024"/>
+ <node id="584202651" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7278605" lon="-1.8894991"/>
+ <node id="584202631" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7251439" lon="-1.8891826"/>
+ <node id="584202638" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7254960" lon="-1.8891869"/>
+ <node id="584202641" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7263986" lon="-1.8896488"/>
+ <node id="584202648" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7270883" lon="-1.8895104"/>
+ <node id="584202643" visible="true" version="2" changeset="14130044" timestamp="2012-12-02T20:24:08Z" user="Gareth Thomas (Lichfield District Council)" uid="572236" lat="52.7266393" lon="-1.8897657"/>
+ <node id="1276832930" visible="true" version="2" changeset="17723966" timestamp="2013-09-07T21:05:02Z" user="lcmortensen" uid="341519" lat="52.6857201" lon="-1.9470622">
+  <tag k="power" v="tower"/>
+ </node>
+ <node id="1276833135" visible="true" version="2" changeset="17723966" timestamp="2013-09-07T21:05:02Z" user="lcmortensen" uid="341519" lat="52.6876743" lon="-1.9464314">
+  <tag k="power" v="tower"/>
+ </node>
+ <node id="1276833172" visible="true" version="2" changeset="17723966" timestamp="2013-09-07T21:05:02Z" user="lcmortensen" uid="341519" lat="52.6950404" lon="-1.9200611">
+  <tag k="power" v="tower"/>
+ </node>
+ <node id="1276832936" visible="true" version="2" changeset="17723966" timestamp="2013-09-07T21:05:02Z" user="lcmortensen" uid="341519" lat="52.6803123" lon="-1.9469439">
+  <tag k="power" v="tower"/>
+ </node>
+ <node id="1276833089" visible="true" version="2" changeset="17723966" timestamp="2013-09-07T21:05:02Z" user="lcmortensen" uid="341519" lat="52.6913655" lon="-1.9422788">
+  <tag k="power" v="tower"/>
+ </node>
+ <node id="1276832793" visible="true" version="2" changeset="17723966" timestamp="2013-09-07T21:05:02Z" user="lcmortensen" uid="341519" lat="52.6906257" lon="-1.9452995">
+  <tag k="power" v="tower"/>
+ </node>
+ <node id="2958294204" visible="true" version="1" changeset="24077656" timestamp="2014-07-11T09:01:20Z" user="MatSmith" uid="188349" lat="52.7268699" lon="-1.8877025"/>
+ <node id="2958294206" visible="true" version="1" changeset="24077656" timestamp="2014-07-11T09:01:20Z" user="MatSmith" uid="188349" lat="52.7272208" lon="-1.8871554"/>
+ <node id="2958294207" visible="true" version="1" changeset="24077656" timestamp="2014-07-11T09:01:20Z" user="MatSmith" uid="188349" lat="52.7274040" lon="-1.8868587"/>
+ <node id="2958294208" visible="true" version="1" changeset="24077656" timestamp="2014-07-11T09:01:21Z" user="MatSmith" uid="188349" lat="52.7269414" lon="-1.8874129"/>
+ <node id="2958294209" visible="true" version="1" changeset="24077656" timestamp="2014-07-11T09:01:21Z" user="MatSmith" uid="188349" lat="52.7274950" lon="-1.8866227"/>
+ <node id="2958294210" visible="true" version="1" changeset="24077656" timestamp="2014-07-11T09:01:21Z" user="MatSmith" uid="188349" lat="52.7275469" lon="-1.8857751"/>
+ <node id="2958294211" visible="true" version="1" changeset="24077656" timestamp="2014-07-11T09:01:21Z" user="MatSmith" uid="188349" lat="52.7275719" lon="-1.8850735"/>
+ <node id="2958294212" visible="true" version="1" changeset="24077656" timestamp="2014-07-11T09:01:21Z" user="MatSmith" uid="188349" lat="52.7289176" lon="-1.8861508"/>
+ <node id="2958294213" visible="true" version="1" changeset="24077656" timestamp="2014-07-11T09:01:21Z" user="MatSmith" uid="188349" lat="52.7266620" lon="-1.8885394"/>
+ <way id="45885373" visible="true" version="2" changeset="8334679" timestamp="2011-06-03T22:17:43Z" user="Miked29" uid="105474">
+  <nd ref="584127575"/>
+  <nd ref="584202628"/>
+  <nd ref="584202631"/>
+  <nd ref="584202638"/>
+  <nd ref="584202641"/>
+  <nd ref="584202643"/>
+  <nd ref="584202646"/>
+  <nd ref="584202648"/>
+  <nd ref="584202651"/>
+  <nd ref="190733157"/>
+  <tag k="highway" v="unclassified"/>
+  <tag k="name" v="Giddywell Lane"/>
+  <tag k="source" v="OS 1:25k"/>
+ </way>
+ <way id="116253403" visible="true" version="2" changeset="24077656" timestamp="2014-07-11T09:01:22Z" user="MatSmith" uid="188349">
+  <nd ref="190733157"/>
+  <nd ref="190733161"/>
+  <nd ref="190733164"/>
+  <nd ref="190733168"/>
+  <nd ref="190733173"/>
+  <nd ref="190733177"/>
+  <nd ref="190733182"/>
+  <nd ref="190733187"/>
+  <nd ref="190733190"/>
+  <nd ref="2958294212"/>
+  <nd ref="190733194"/>
+  <nd ref="190733199"/>
+  <tag k="highway" v="unclassified"/>
+  <tag k="name" v="High Street"/>
+  <tag k="source" v="OS 1:25k"/>
+  <tag k="surface" v="paved"/>
+ </way>
+ <way id="116253420" visible="true" version="2" changeset="13737174" timestamp="2012-11-03T17:39:15Z" user="Proud Salopian" uid="63121">
+  <nd ref="190733040"/>
+  <nd ref="190733045"/>
+  <nd ref="190733050"/>
+  <nd ref="190733055"/>
+  <nd ref="190733059"/>
+  <nd ref="190733062"/>
+  <nd ref="190733065"/>
+  <nd ref="190733069"/>
+  <nd ref="190733072"/>
+  <nd ref="190733073"/>
+  <nd ref="190733076"/>
+  <nd ref="190733081"/>
+  <nd ref="190733085"/>
+  <nd ref="190733087"/>
+  <nd ref="190733089"/>
+  <nd ref="190733094"/>
+  <nd ref="190733097"/>
+  <nd ref="1995732734"/>
+  <nd ref="190733101"/>
+  <nd ref="190733106"/>
+  <nd ref="190733111"/>
+  <nd ref="190733116"/>
+  <nd ref="190733120"/>
+  <nd ref="190733124"/>
+  <nd ref="190733128"/>
+  <nd ref="190733133"/>
+  <nd ref="190733135"/>
+  <nd ref="190733140"/>
+  <nd ref="190733144"/>
+  <nd ref="190733149"/>
+  <nd ref="190733153"/>
+  <nd ref="190733154"/>
+  <nd ref="190733155"/>
+  <nd ref="190733157"/>
+  <tag k="highway" v="unclassified"/>
+  <tag k="name" v="Stockings Lane"/>
+  <tag k="source" v="OS 1:25k"/>
+  <tag k="surface" v="paved"/>
+ </way>
+ <way id="237040048" visible="true" version="1" changeset="17723966" timestamp="2013-09-07T21:05:02Z" user="lcmortensen" uid="341519">
+  <nd ref="1276832936"/>
+  <nd ref="1276833333"/>
+  <nd ref="1276832930"/>
+  <nd ref="1276833135"/>
+  <nd ref="1276832755"/>
+  <nd ref="1276832793"/>
+  <nd ref="1276833089"/>
+  <nd ref="1276833322"/>
+  <nd ref="1276832964"/>
+  <nd ref="1276833255"/>
+  <nd ref="1276832853"/>
+  <nd ref="1276833172"/>
+  <nd ref="1276833218"/>
+  <nd ref="1276833087"/>
+  <nd ref="1276832751"/>
+  <nd ref="1276833190"/>
+  <nd ref="1276832881"/>
+  <nd ref="1276833276"/>
+  <nd ref="1276832997"/>
+  <nd ref="1276833331"/>
+  <nd ref="1276833095"/>
+  <nd ref="1276832825"/>
+  <nd ref="1276833240"/>
+  <nd ref="1276832942"/>
+  <nd ref="1276833315"/>
+  <nd ref="1276833063"/>
+  <nd ref="1276832710"/>
+  <nd ref="1276833174"/>
+  <nd ref="1276832873"/>
+  <nd ref="1276833118"/>
+  <nd ref="1276832773"/>
+  <nd ref="1276833024"/>
+  <nd ref="1276833260"/>
+  <nd ref="1276832969"/>
+  <tag k="cables" v="6"/>
+  <tag k="power" v="line"/>
+  <tag k="source" v="BING"/>
+  <tag k="voltage" v="132000"/>
+ </way>
+ <way id="292279616" visible="true" version="1" changeset="24077656" timestamp="2014-07-11T09:01:21Z" user="MatSmith" uid="188349">
+  <nd ref="2958294211"/>
+  <nd ref="2958294210"/>
+  <nd ref="2958294209"/>
+  <nd ref="2958294207"/>
+  <nd ref="2958294206"/>
+  <nd ref="2958294208"/>
+  <nd ref="2958294204"/>
+  <nd ref="2958294213"/>
+  <nd ref="584202643"/>
+  <tag k="designation" v="public_footpath"/>
+  <tag k="foot" v="designated"/>
+  <tag k="highway" v="footway"/>
+ </way>
+</osm>

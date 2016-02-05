@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.4.0 (22141 thorn-03.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <bounds minlat="54.5593226" minlon="-1.8237305" maxlat="54.5656926" maxlon="-1.8127441"/>
+ <node id="489385446" visible="true" version="1" changeset="2412102" timestamp="2009-09-08T10:55:17Z" user="NaPTAN" uid="104459" lat="54.5644408" lon="-1.8162842">
+  <tag k="highway" v="bus_stop"/>
+  <tag k="name" v="Village"/>
+  <tag k="naptan:AtcoCode" v="13007726B"/>
+  <tag k="naptan:Bearing" v="NE"/>
+  <tag k="naptan:CommonName" v="Village"/>
+  <tag k="naptan:Indicator" v="north east bound"/>
+  <tag k="naptan:Landmark" v="Landmark not known"/>
+  <tag k="naptan:NaptanCode" v="durgadgp"/>
+  <tag k="naptan:Notes" v="Opposite the boundary between 1 and 2 East Farm Cottages- Cleatlam Back Lane- Cleatlam- Staindr"/>
+  <tag k="naptan:Street" v="Street not known"/>
+  <tag k="naptan:verified" v="no"/>
+  <tag k="source" v="naptan_import"/>
+ </node>
+ <node id="489385447" visible="true" version="1" changeset="2412102" timestamp="2009-09-08T10:55:17Z" user="NaPTAN" uid="104459" lat="54.5630061" lon="-1.8183939">
+  <tag k="highway" v="bus_stop"/>
+  <tag k="name" v="Village"/>
+  <tag k="naptan:AtcoCode" v="13007726F"/>
+  <tag k="naptan:Bearing" v="SW"/>
+  <tag k="naptan:CommonName" v="Village"/>
+  <tag k="naptan:Indicator" v="south west bound"/>
+  <tag k="naptan:Landmark" v="Landmark not known"/>
+  <tag k="naptan:NaptanCode" v="durgadgt"/>
+  <tag k="naptan:Notes" v="Outside Halbank (house name)- Cleatlam Back Lane- Cleatlam- Staindrop"/>
+  <tag k="naptan:Street" v="Street not known"/>
+  <tag k="naptan:verified" v="no"/>
+  <tag k="source" v="naptan_import"/>
+ </node>
+ <node id="797529184" visible="true" version="1" changeset="5116369" timestamp="2010-06-30T20:19:35Z" user="mplusplus" uid="135339" lat="54.5640783" lon="-1.8337162"/>
+ <node id="797529518" visible="true" version="1" changeset="5116369" timestamp="2010-06-30T20:19:38Z" user="mplusplus" uid="135339" lat="54.5665720" lon="-1.8102284"/>
+ <node id="797529445" visible="true" version="2" changeset="11299922" timestamp="2012-04-14T15:21:03Z" user="Firefishy" uid="3560" lat="54.5673455" lon="-1.8335069"/>
+ <node id="2623460752" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5666797" lon="-1.8096747"/>
+ <node id="2623460754" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5662488" lon="-1.8117505"/>
+ <node id="2623460756" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5660785" lon="-1.8125167"/>
+ <node id="2623460758" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5659974" lon="-1.8128919"/>
+ <node id="2623460760" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5655737" lon="-1.8142138"/>
+ <node id="2623460762" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5657553" lon="-1.8137625"/>
+ <node id="2623460764" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5658353" lon="-1.8135165"/>
+ <node id="2623460766" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5643497" lon="-1.8162877"/>
+ <node id="2623460768" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5647673" lon="-1.8157002"/>
+ <node id="2623460770" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5649909" lon="-1.8154312"/>
+ <node id="2623460772" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5650977" lon="-1.8152879"/>
+ <node id="2623460773" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5639116" lon="-1.8169602"/>
+ <node id="2623460774" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5635412" lon="-1.8175371"/>
+ <node id="2623460775" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5637197" lon="-1.8172380"/>
+ <node id="2623460776" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5630354" lon="-1.8184714"/>
+ <node id="2623460777" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5625562" lon="-1.8212214"/>
+ <node id="2623460778" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5627368" lon="-1.8199933"/>
+ <node id="2623460779" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5628271" lon="-1.8193898"/>
+ <node id="2623460781" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5628846" lon="-1.8190890"/>
+ <node id="2623460782" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5623951" lon="-1.8224424"/>
+ <node id="2623460784" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5621202" lon="-1.8250065"/>
+ <node id="2623460787" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5621694" lon="-1.8243341"/>
+ <node id="2623460788" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5620206" lon="-1.8267266"/>
+ <node id="2623460790" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5620730" lon="-1.8274185"/>
+ <node id="2623460792" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5628917" lon="-1.8292040"/>
+ <node id="2623460794" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5624998" lon="-1.8284873"/>
+ <node id="2623460796" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5622628" lon="-1.8280644"/>
+ <node id="2623460798" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5621910" lon="-1.8279087"/>
+ <node id="2623460800" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5637567" lon="-1.8308374"/>
+ <node id="2623460802" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5637136" lon="-1.8307241"/>
+ <node id="2623460804" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5638008" lon="-1.8309913"/>
+ <node id="2623460807" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5638695" lon="-1.8322849"/>
+ <node id="2623460809" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5638593" lon="-1.8317151"/>
+ <node id="2623460811" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5638521" lon="-1.8314284"/>
+ <node id="2623460813" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5638439" lon="-1.8312992"/>
+ <node id="2623460815" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5638736" lon="-1.8326724"/>
+ <node id="2623460817" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5639444" lon="-1.8335661"/>
+ <node id="2623460818" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5638921" lon="-1.8333325"/>
+ <node id="2623460820" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:50Z" user="Ayresome" uid="1407576" lat="54.5639116" lon="-1.8334581"/>
+ <node id="2623460822" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:51Z" user="Ayresome" uid="1407576" lat="54.5640009" lon="-1.8336669"/>
+ <node id="2623460824" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:51Z" user="Ayresome" uid="1407576" lat="54.5652269" lon="-1.8335873"/>
+ <node id="2623460826" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:51Z" user="Ayresome" uid="1407576" lat="54.5646514" lon="-1.8336722"/>
+ <node id="2623460828" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:51Z" user="Ayresome" uid="1407576" lat="54.5643507" lon="-1.8337183"/>
+ <node id="2623460830" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:51Z" user="Ayresome" uid="1407576" lat="54.5642153" lon="-1.8337360"/>
+ <node id="2623460832" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:51Z" user="Ayresome" uid="1407576" lat="54.5658004" lon="-1.8335236"/>
+ <node id="2623460834" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:51Z" user="Ayresome" uid="1407576" lat="54.5660887" lon="-1.8334988"/>
+ <node id="2623460836" visible="true" version="1" changeset="20014729" timestamp="2014-01-15T13:57:51Z" user="Ayresome" uid="1407576" lat="54.5668643" lon="-1.8334440"/>
+ <node id="797529551" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:57:59Z" user="Ayresome" uid="1407576" lat="54.5667761" lon="-1.8091279"/>
+ <node id="797529507" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:00Z" user="Ayresome" uid="1407576" lat="54.5659051" lon="-1.8132635"/>
+ <node id="797529316" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:00Z" user="Ayresome" uid="1407576" lat="54.5651941" lon="-1.8151233"/>
+ <node id="797529352" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:00Z" user="Ayresome" uid="1407576" lat="54.5631483" lon="-1.8181511"/>
+ <node id="797529104" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:00Z" user="Ayresome" uid="1407576" lat="54.5629513" lon="-1.8187917"/>
+ <node id="797529449" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:00Z" user="Ayresome" uid="1407576" lat="54.5622320" lon="-1.8236599"/>
+ <node id="797529139" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:00Z" user="Ayresome" uid="1407576" lat="54.5620319" lon="-1.8263585"/>
+ <node id="797529073" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:00Z" user="Ayresome" uid="1407576" lat="54.5620381" lon="-1.8270716"/>
+ <node id="797529280" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:00Z" user="Ayresome" uid="1407576" lat="54.5621366" lon="-1.8277352"/>
+ <node id="797529472" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:00Z" user="Ayresome" uid="1407576" lat="54.5636633" lon="-1.8306179"/>
+ <node id="797529413" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:00Z" user="Ayresome" uid="1407576" lat="54.5638265" lon="-1.8311541"/>
+ <node id="797529263" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:00Z" user="Ayresome" uid="1407576" lat="54.5638808" lon="-1.8330653"/>
+ <node id="797529261" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:00Z" user="Ayresome" uid="1407576" lat="54.5663750" lon="-1.8334511"/>
+ <node id="433912018" visible="true" version="2" changeset="32552570" timestamp="2015-07-10T20:20:46Z" user="Med" uid="88164" lat="54.5633265" lon="-1.8201861">
+  <tag k="is_in" v="County Durham"/>
+  <tag k="is_in:country_code" v="GB"/>
+  <tag k="is_in:county" v="County Durham"/>
+  <tag k="name" v="Cleatlam"/>
+  <tag k="place" v="hamlet"/>
+  <tag k="wikipedia" v="en:Cleatlam"/>
+ </node>
+ <way id="198669318" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:04Z" user="Ayresome" uid="1407576">
+  <nd ref="797529449"/>
+  <nd ref="2623460787"/>
+  <nd ref="2623460784"/>
+  <nd ref="797529139"/>
+  <nd ref="2623460788"/>
+  <nd ref="797529073"/>
+  <nd ref="2623460790"/>
+  <nd ref="797529280"/>
+  <nd ref="2623460798"/>
+  <nd ref="2623460796"/>
+  <nd ref="2623460794"/>
+  <nd ref="2623460792"/>
+  <nd ref="797529472"/>
+  <nd ref="2623460802"/>
+  <nd ref="2623460800"/>
+  <nd ref="2623460804"/>
+  <nd ref="797529413"/>
+  <nd ref="2623460813"/>
+  <nd ref="2623460811"/>
+  <nd ref="2623460809"/>
+  <nd ref="2623460807"/>
+  <nd ref="2623460815"/>
+  <nd ref="797529263"/>
+  <nd ref="2623460818"/>
+  <nd ref="2623460820"/>
+  <nd ref="2623460817"/>
+  <nd ref="2623460822"/>
+  <nd ref="797529184"/>
+  <nd ref="2623460830"/>
+  <nd ref="2623460828"/>
+  <nd ref="2623460826"/>
+  <nd ref="2623460824"/>
+  <nd ref="2623460832"/>
+  <nd ref="2623460834"/>
+  <nd ref="797529261"/>
+  <nd ref="2623460836"/>
+  <nd ref="797529445"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Cleatlam Back Lane"/>
+  <tag k="source" v="OS OpenData StreetView"/>
+  <tag k="source:name" v="OS_OpenData_Locator"/>
+ </way>
+ <way id="232900770" visible="true" version="2" changeset="20014729" timestamp="2014-01-15T13:58:04Z" user="Ayresome" uid="1407576">
+  <nd ref="797529551"/>
+  <nd ref="2623460752"/>
+  <nd ref="797529518"/>
+  <nd ref="2623460754"/>
+  <nd ref="2623460756"/>
+  <nd ref="2623460758"/>
+  <nd ref="797529507"/>
+  <nd ref="2623460764"/>
+  <nd ref="2623460762"/>
+  <nd ref="2623460760"/>
+  <nd ref="797529316"/>
+  <nd ref="2623460772"/>
+  <nd ref="2623460770"/>
+  <nd ref="2623460768"/>
+  <nd ref="2623460766"/>
+  <nd ref="2623460773"/>
+  <nd ref="2623460775"/>
+  <nd ref="2623460774"/>
+  <nd ref="797529352"/>
+  <nd ref="2623460776"/>
+  <nd ref="797529104"/>
+  <nd ref="2623460781"/>
+  <nd ref="2623460779"/>
+  <nd ref="2623460778"/>
+  <nd ref="2623460777"/>
+  <nd ref="2623460782"/>
+  <nd ref="797529449"/>
+  <tag k="highway" v="residential"/>
+ </way>
+ <relation id="234316" visible="true" version="2" changeset="3891683" timestamp="2010-02-16T13:55:49Z" user="Pink Duck" uid="91657">
+  <member type="node" ref="489385446" role=""/>
+  <member type="node" ref="489385447" role=""/>
+  <tag k="name" v="Cleatlam - Village"/>
+  <tag k="naptan:StopAreaCode" v="130G7726"/>
+  <tag k="naptan:StopAreaType" v="GPBS"/>
+  <tag k="naptan:verified" v="no"/>
+  <tag k="site" v="stop_area"/>
+  <tag k="source" v="naptan_import"/>
+  <tag k="type" v="site"/>
+ </relation>
+</osm>
