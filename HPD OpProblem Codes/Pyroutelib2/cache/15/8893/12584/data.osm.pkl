@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.4.0 (6995 thorn-01.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <bounds minlat="38.4707937" minlon="-82.2985840" maxlat="38.4793947" maxlon="-82.2875977"/>
+ <node id="154763697" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:21Z" user="woodpeck_fixbot" uid="147510" lat="38.4701610" lon="-82.2962770"/>
+ <node id="154763698" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:21Z" user="woodpeck_fixbot" uid="147510" lat="38.4703040" lon="-82.2966280"/>
+ <node id="154763700" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:21Z" user="woodpeck_fixbot" uid="147510" lat="38.4704070" lon="-82.2968260"/>
+ <node id="154763701" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:21Z" user="woodpeck_fixbot" uid="147510" lat="38.4706050" lon="-82.2968040"/>
+ <node id="154763703" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:21Z" user="woodpeck_fixbot" uid="147510" lat="38.4705770" lon="-82.2970010"/>
+ <node id="154763707" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:21Z" user="woodpeck_fixbot" uid="147510" lat="38.4708160" lon="-82.2973450"/>
+ <node id="154763705" visible="true" version="2" changeset="3147528" timestamp="2009-11-18T04:26:46Z" user="woodpeck_fixbot" uid="147510" lat="38.4707050" lon="-82.2972040"/>
+ <node id="154755014" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:25:04Z" user="woodpeck_fixbot" uid="147510" lat="38.4842670" lon="-82.2945180"/>
+ <node id="154763709" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:21Z" user="woodpeck_fixbot" uid="147510" lat="38.4709630" lon="-82.2973830"/>
+ <node id="154763711" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4709750" lon="-82.2974780"/>
+ <node id="154763714" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4710990" lon="-82.2975290"/>
+ <node id="154763716" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4710990" lon="-82.2976900"/>
+ <node id="154763722" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4772530" lon="-82.2992970"/>
+ <node id="154763723" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4771940" lon="-82.2991120"/>
+ <node id="154763724" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4772050" lon="-82.2988800"/>
+ <node id="154763726" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4770800" lon="-82.2987710"/>
+ <node id="154763728" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4770410" lon="-82.2985680"/>
+ <node id="154763730" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4769550" lon="-82.2984910"/>
+ <node id="154763732" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4769290" lon="-82.2983050"/>
+ <node id="154763733" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4768030" lon="-82.2981640"/>
+ <node id="154763734" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4767900" lon="-82.2979780"/>
+ <node id="154763736" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4766530" lon="-82.2977600"/>
+ <node id="154763738" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4766370" lon="-82.2973870"/>
+ <node id="154763740" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:22Z" user="woodpeck_fixbot" uid="147510" lat="38.4765250" lon="-82.2972320"/>
+ <node id="154763760" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:23Z" user="woodpeck_fixbot" uid="147510" lat="38.4779900" lon="-82.2931890"/>
+ <node id="154763762" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:23Z" user="woodpeck_fixbot" uid="147510" lat="38.4785480" lon="-82.2946470"/>
+ <node id="154763764" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:23Z" user="woodpeck_fixbot" uid="147510" lat="38.4791620" lon="-82.2950280"/>
+ <node id="154763766" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:23Z" user="woodpeck_fixbot" uid="147510" lat="38.4796170" lon="-82.2953980"/>
+ <node id="154763768" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:23Z" user="woodpeck_fixbot" uid="147510" lat="38.4799980" lon="-82.2958440"/>
+ <node id="154763772" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:23Z" user="woodpeck_fixbot" uid="147510" lat="38.4803150" lon="-82.2961460"/>
+ <node id="154763774" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:23Z" user="woodpeck_fixbot" uid="147510" lat="38.4806290" lon="-82.2960860"/>
+ <node id="154763776" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:23Z" user="woodpeck_fixbot" uid="147510" lat="38.4813500" lon="-82.2953500"/>
+ <node id="154763778" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:23Z" user="woodpeck_fixbot" uid="147510" lat="38.4815390" lon="-82.2950760"/>
+ <node id="154763780" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:23Z" user="woodpeck_fixbot" uid="147510" lat="38.4816760" lon="-82.2946400"/>
+ <node id="154763782" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:23Z" user="woodpeck_fixbot" uid="147510" lat="38.4821730" lon="-82.2941710"/>
+ <node id="154763784" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:23Z" user="woodpeck_fixbot" uid="147510" lat="38.4829270" lon="-82.2939970"/>
+ <node id="154763786" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:23Z" user="woodpeck_fixbot" uid="147510" lat="38.4838620" lon="-82.2942740"/>
+ <node id="154765106" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:55Z" user="woodpeck_fixbot" uid="147510" lat="38.4695500" lon="-82.2891030"/>
+ <node id="154765108" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:55Z" user="woodpeck_fixbot" uid="147510" lat="38.4697970" lon="-82.2893400"/>
+ <node id="154765112" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:55Z" user="woodpeck_fixbot" uid="147510" lat="38.4701470" lon="-82.2893200"/>
+ <node id="154765114" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:55Z" user="woodpeck_fixbot" uid="147510" lat="38.4704190" lon="-82.2890550"/>
+ <node id="154765116" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:55Z" user="woodpeck_fixbot" uid="147510" lat="38.4707350" lon="-82.2891480"/>
+ <node id="154765118" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:55Z" user="woodpeck_fixbot" uid="147510" lat="38.4710480" lon="-82.2889550"/>
+ <node id="154765120" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:55Z" user="woodpeck_fixbot" uid="147510" lat="38.4712920" lon="-82.2889880"/>
+ <node id="154765122" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:55Z" user="woodpeck_fixbot" uid="147510" lat="38.4714350" lon="-82.2888840"/>
+ <node id="154765124" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:28:55Z" user="woodpeck_fixbot" uid="147510" lat="38.4715140" lon="-82.2889140"/>
+ <node id="154774204" visible="true" version="2" changeset="2660097" timestamp="2009-09-28T03:32:56Z" user="woodpeck_fixbot" uid="147510" lat="38.4776260" lon="-82.2955470"/>
+ <way id="15515475" visible="true" version="1" changeset="157970" timestamp="2007-12-07T13:45:36Z" user="DaveHansenTiger" uid="7168">
+  <nd ref="154763697"/>
+  <nd ref="154763698"/>
+  <nd ref="154763700"/>
+  <nd ref="154763701"/>
+  <nd ref="154763703"/>
+  <nd ref="154763705"/>
+  <nd ref="154763707"/>
+  <nd ref="154763709"/>
+  <nd ref="154763711"/>
+  <nd ref="154763714"/>
+  <nd ref="154763716"/>
+  <tag k="access" v="private"/>
+  <tag k="highway" v="service"/>
+  <tag k="tiger:cfcc" v="A74"/>
+  <tag k="tiger:county" v="Cabell, WV"/>
+  <tag k="tiger:reviewed" v="no"/>
+  <tag k="tiger:source" v="tiger_import_dch_v0.6_20070828"/>
+  <tag k="tiger:tlid" v="101330200"/>
+  <tag k="tiger:upload_uuid" v="bulk_upload.pl-ddff1da1-5eea-4772-864b-f421658e8f1d"/>
+ </way>
+ <way id="15515480" visible="true" version="1" changeset="157970" timestamp="2007-12-07T13:45:37Z" user="DaveHansenTiger" uid="7168">
+  <nd ref="154763722"/>
+  <nd ref="154763723"/>
+  <nd ref="154763724"/>
+  <nd ref="154763726"/>
+  <nd ref="154763728"/>
+  <nd ref="154763730"/>
+  <nd ref="154763732"/>
+  <nd ref="154763733"/>
+  <nd ref="154763734"/>
+  <nd ref="154763736"/>
+  <nd ref="154763738"/>
+  <nd ref="154763740"/>
+  <tag k="access" v="private"/>
+  <tag k="highway" v="service"/>
+  <tag k="tiger:cfcc" v="A74"/>
+  <tag k="tiger:county" v="Cabell, WV"/>
+  <tag k="tiger:reviewed" v="no"/>
+  <tag k="tiger:source" v="tiger_import_dch_v0.6_20070828"/>
+  <tag k="tiger:tlid" v="101330203"/>
+  <tag k="tiger:upload_uuid" v="bulk_upload.pl-ddff1da1-5eea-4772-864b-f421658e8f1d"/>
+ </way>
+ <way id="15515483" visible="true" version="1" changeset="157970" timestamp="2007-12-07T13:45:39Z" user="DaveHansenTiger" uid="7168">
+  <nd ref="154763760"/>
+  <nd ref="154763762"/>
+  <nd ref="154763764"/>
+  <nd ref="154763766"/>
+  <nd ref="154763768"/>
+  <nd ref="154763772"/>
+  <nd ref="154763774"/>
+  <nd ref="154763776"/>
+  <nd ref="154763778"/>
+  <nd ref="154763780"/>
+  <nd ref="154763782"/>
+  <nd ref="154763784"/>
+  <nd ref="154763786"/>
+  <nd ref="154755014"/>
+  <tag k="access" v="private"/>
+  <tag k="highway" v="service"/>
+  <tag k="tiger:cfcc" v="A74"/>
+  <tag k="tiger:county" v="Cabell, WV"/>
+  <tag k="tiger:reviewed" v="no"/>
+  <tag k="tiger:source" v="tiger_import_dch_v0.6_20070828"/>
+  <tag k="tiger:tlid" v="101330206:101330209:101330211:101330213"/>
+  <tag k="tiger:upload_uuid" v="bulk_upload.pl-ddff1da1-5eea-4772-864b-f421658e8f1d"/>
+ </way>
+ <way id="15515613" visible="true" version="1" changeset="157970" timestamp="2007-12-07T13:46:39Z" user="DaveHansenTiger" uid="7168">
+  <nd ref="154765106"/>
+  <nd ref="154765108"/>
+  <nd ref="154765112"/>
+  <nd ref="154765114"/>
+  <nd ref="154765116"/>
+  <nd ref="154765118"/>
+  <nd ref="154765120"/>
+  <nd ref="154765122"/>
+  <nd ref="154765124"/>
+  <tag k="access" v="private"/>
+  <tag k="highway" v="service"/>
+  <tag k="tiger:cfcc" v="A74"/>
+  <tag k="tiger:county" v="Cabell, WV"/>
+  <tag k="tiger:reviewed" v="no"/>
+  <tag k="tiger:source" v="tiger_import_dch_v0.6_20070828"/>
+  <tag k="tiger:tlid" v="101330197"/>
+  <tag k="tiger:upload_uuid" v="bulk_upload.pl-ddff1da1-5eea-4772-864b-f421658e8f1d"/>
+ </way>
+ <way id="15516471" visible="true" version="1" changeset="157970" timestamp="2007-12-07T13:53:52Z" user="DaveHansenTiger" uid="7168">
+  <nd ref="154774204"/>
+  <nd ref="154763762"/>
+  <tag k="access" v="private"/>
+  <tag k="highway" v="service"/>
+  <tag k="tiger:cfcc" v="A74"/>
+  <tag k="tiger:county" v="Cabell, WV"/>
+  <tag k="tiger:reviewed" v="no"/>
+  <tag k="tiger:source" v="tiger_import_dch_v0.6_20070828"/>
+  <tag k="tiger:tlid" v="101330212"/>
+  <tag k="tiger:upload_uuid" v="bulk_upload.pl-ddff1da1-5eea-4772-864b-f421658e8f1d"/>
+ </way>
+</osm>
