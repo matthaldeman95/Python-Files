@@ -34,4 +34,6 @@ Here's the URL to where I found this code, which gives some good information abo
 
 I honestly don't really know how to do it on a Windows.
 
-We could all meet up sometime this week and go over Python stuff if anyone wants to.**
+We could all meet up sometime this week and go over Python stuff if anyone wants to.
+
+Feel free to hit me up with any questions!  I’d be glad to help.**
