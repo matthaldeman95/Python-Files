@@ -23,6 +23,8 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #------------------------------------------------------
 from route import *
+
+outfile = open('/Users/Matt/Desktop/newdata.gpx','w')     #Edit path name here to get data file
   
 def routeToGpx(lat1,lon1,lat2,lon2, transport, description="", style="track"):
   """Format a route (as list of nodes) into a GPX file"""
@@ -69,7 +71,7 @@ def routeToGpx(lat1,lon1,lat2,lon2, transport, description="", style="track"):
       output = output + "   </rtept>\n"
       count = count + 1
     output = output + " </rte>\n</gpx>\n"
-  outfile = open('/Users/Matt/Desktop/newdata.gpx','w')
+
   outfile.write(output)
   outfile.close()
   return(output)
