@@ -14,6 +14,11 @@ len(sg)
 pos0 = (36.6026, -121.9026)                                         #Locations of start and end points
 pos1 = (34.0569, -118.2427)
 
+
+EARTH_R = 6372.8                                                    #Radius of earth for orthodromic
+                                                                    #distance calculation
+
+
 def get_path(n0, n1):
     """If n0 and n1 are connected nodes in the graph, this function
     return an array of point coordinates along the road linking
@@ -21,7 +26,7 @@ def get_path(n0, n1):
     return np.array(json.loads(sg[n0][n1]['Json'])['coordinates'])
 
 
-EARTH_R = 6372.8
+
 def geocalc(lat0, lon0, lat1, lon1):
     """Return the distance (in km) between two points in
     geographical coordinates."""
@@ -74,7 +79,7 @@ roads
 
 roads['distance'].sum()
 
-#map = smopy.Map(pos0, pos1, z=7, margin=.1)                #   ERROR HERE!!!!
+map = smopy.Map(pos0, pos1, z=7, margin=.1)                #   ERROR HERE!!!!
 
 def get_full_path(path):
     """Return the positions along a path."""
