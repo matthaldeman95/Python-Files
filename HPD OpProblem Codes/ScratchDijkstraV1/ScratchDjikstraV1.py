@@ -52,7 +52,7 @@ class Graph:
 def shortest_path(graph, origin, destination):
     visited, paths = Graph.dijkstra(graph, origin)
     full_path = deque()
-    _destination = paths[destination]
+    _destination = paths[str(destination)]
 
     while _destination != origin:
         full_path.appendleft(_destination)
@@ -69,36 +69,41 @@ def shortest_path(graph, origin, destination):
 if __name__ == '__main__':
     graph = Graph()
 
-    node1 = {'x': 0, 'y':0}
-    node2 = {'x': 2, 'y':2}
-    node3 = {'x': 4, 'y':1}
-    node4 = {'x': 1, 'y':5}
-    node5 = {'x': 5, 'y':7}
-    node6 = {'x': 8, 'y':4}
+    node0 = {'x': 0, 'y':0}
+    node1 = {'x': 2, 'y':2}
+    node2 = {'x': 4, 'y':1}
+    node3 = {'x': 1, 'y':5}
+    node4 = {'x': 5, 'y':7}
+    node5 = {'x': 8, 'y':4}
 
-    for node in ['1','2','3','4','5','6']:
+
+    for node in ['0','1','2','3','4','5']:
         graph.add_node(node)
 
+    dist01 = math.sqrt( (node1['x']-node0['x'])**2 + (node1['y']-node0['y'])**2 )
+    dist02 = math.sqrt( (node2['x']-node0['x'])**2 + (node2['y']-node0['y'])**2 )
+    dist03 = math.sqrt( (node3['x']-node0['x'])**2 + (node3['y']-node0['y'])**2 )
     dist12 = math.sqrt( (node2['x']-node1['x'])**2 + (node2['y']-node1['y'])**2 )
     dist13 = math.sqrt( (node3['x']-node1['x'])**2 + (node3['y']-node1['y'])**2 )
     dist14 = math.sqrt( (node4['x']-node1['x'])**2 + (node4['y']-node1['y'])**2 )
-    dist23 = math.sqrt( (node3['x']-node2['x'])**2 + (node3['y']-node2['y'])**2 )
-    dist24 = math.sqrt( (node4['x']-node2['x'])**2 + (node4['y']-node2['y'])**2 )
     dist25 = math.sqrt( (node5['x']-node2['x'])**2 + (node5['y']-node2['y'])**2 )
-    dist36 = math.sqrt( (node6['x']-node3['x'])**2 + (node6['y']-node3['y'])**2 )
+    dist34 = math.sqrt( (node4['x']-node3['x'])**2 + (node4['y']-node3['y'])**2 )
     dist45 = math.sqrt( (node5['x']-node4['x'])**2 + (node5['y']-node4['y'])**2 )
-    dist56 = math.sqrt( (node6['x']-node5['x'])**2 + (node6['y']-node5['y'])**2 )
 
+    graph.add_edge('0','1',dist01)
+    graph.add_edge('0','2',dist02)
+    graph.add_edge('0','3',dist03)
     graph.add_edge('1','2',dist12)
     graph.add_edge('1','3',dist13)
     graph.add_edge('1','4',dist14)
-    graph.add_edge('2','3',dist23)
-    graph.add_edge('2','4',dist24)
     graph.add_edge('2','5',dist25)
-    graph.add_edge('3','6',dist36)
+    graph.add_edge('3','4',dist34)
     graph.add_edge('4','5',dist45)
-    graph.add_edge('5','6',dist56)
     
 
 
-    print(shortest_path(graph, '1', '6'))
+    print(shortest_path(graph, '0', '5'))
+
+    #Attempt to add in a graph of points / shortest route
+
+
