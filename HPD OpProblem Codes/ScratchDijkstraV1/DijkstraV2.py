@@ -102,6 +102,9 @@ if __name__ == '__main__':
     dist34 = math.sqrt( (nodes[4][0]-nodes[3][0])**2 + (nodes[4][1]-nodes[3][1])**2 )
     dist45 = math.sqrt( (nodes[5][0]-nodes[4][0])**2 + (nodes[5][1]-nodes[4][1])**2 )
 
+
+
+
     graph.add_edge(str(nodes[0][2]),str(nodes[1][2]),dist01)
     graph.add_edge(str(nodes[0][2]),str(nodes[2][2]),dist02)
     graph.add_edge(str(nodes[0][2]),str(nodes[3][2]),dist03)
@@ -112,20 +115,17 @@ if __name__ == '__main__':
     graph.add_edge(str(nodes[3][2]),str(nodes[4][2]),dist34)
     graph.add_edge(str(nodes[4][2]),str(nodes[5][2]),dist45)
 
-    plt.plot(nodes[0][0],nodes[0][1],nodes[1][0],nodes[1][1])
-
-
-
-
     result = shortest_path(graph, '0', '5')
 
 
     print(result)
 
 
+    #Attempt at plotting nodes/edges.  Edges can be plotted as lines, should be simple
+    #would prefer to use networkx, but their documentation gives me a headache
+    #
 
-
-
+    """
     #Attempt to add in a graph of points / shortest route
     xmax = 0
     ymax = 0
@@ -139,3 +139,4 @@ if __name__ == '__main__':
     plt.axis([0,xmax+3,0,ymax+3])
     #plt.plot(1,1)
     plt.show()
+    """
