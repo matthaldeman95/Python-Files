@@ -18,28 +18,31 @@ class Graph:
         self.distances[(to_node, from_node)] = distance
 
     def dijkstra(graph, initial):
-        visited = {initial:0}
+        visited = {initial:0}                                   #create dictionary of visited nodes
         path = {}
 
         nodes = set(graph.nodes)
 
-        while nodes:
-            min_node = None
-            for node in nodes:
-                if node in visited:
-                    if min_node is None:
-                        min_node = node
-                    elif visited[node] < visited[min_node]:
-                        min_node = node
+        while nodes:                                            #While there are nodes left in node set,
+            min_node = None                                     #
+            for node in nodes:                                  #Evaluate each node in set
+                if node in visited:                             #
+                    if min_node is None:                        #
+                        min_node = node                         #Set current node
+                    elif visited[node] < visited[min_node]:     #
+                        min_node = node                         #
             if min_node is None:
                 break
 
-            nodes.remove(min_node)
+            nodes.remove(min_node)                              #remove current node from list of nodes
             current_weight = visited[min_node]
 
-            for edge in graph.edges[min_node]:
-                weight = current_weight + graph.distances[(min_node,edge)]
-                if edge not in visited or weight < visited[edge]:
+            for edge in graph.edges[min_node]:                                  #for all edges connected
+                                                                                # to the current node:
+                weight = current_weight + graph.distances[(min_node,edge)]      #add current weight to distance
+                                                                                #between nodes, if already visited
+                if edge not in visited or weight < visited[edge]:               #set weight to edge length if not
+                                                                                # visited yet
                     visited[edge] = weight
                     path[edge] = min_node
         return visited, path
