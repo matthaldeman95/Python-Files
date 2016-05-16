@@ -6,6 +6,4 @@ response = newurllib2.urlopen('http://api.openweathermap.org/data/2.5/weather?id
 soup = Soup(response)
 #print soup.prettify()
 
-temp = int(float(str(soup.find("temperature")['value'])))
-print temp
-
+print soup.find('weather')['number']

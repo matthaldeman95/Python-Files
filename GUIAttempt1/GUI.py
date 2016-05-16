@@ -10,13 +10,15 @@ class MainWindow(wx.Frame):
         self.SetStatusText('Welcome to a sample GUI!')
 
         filemenu= wx.Menu()
-        menuAbout = filemenu.Append(wx.ID_ABOUT, "&About"," Information about this program")
-        menuExit = filemenu.Append(wx.ID_EXIT,"E&xit"," Terminate the program")
+        filemenu.Append(wx.ID_ABOUT, "&About", " Information about this program")
+        filemenu.Append(wx.ID_EXIT, "E&xit", " Terminate the program")
+        #menuAbout = filemenu.Append(wx.ID_ABOUT, "&About"," Information about this program")
+        #menuExit = filemenu.Append(wx.ID_EXIT,"E&xit"," Terminate the program")
         menuBar = wx.MenuBar()
-        menuBar.Append(filemenu,"&Shit")
+        menuBar.Append(filemenu,"&File")
         self.SetMenuBar(menuBar)
-        self.Bind(wx.EVT_MENU, self.OnAbout, menuAbout)
-        self.Bind(wx.EVT_MENU, self.OnExit, menuExit)
+        #self.Bind(wx.EVT_MENU, self.OnAbout, menuAbout)
+        #self.Bind(wx.EVT_MENU, self.OnExit, menuExit)
         self.Show(True)
 
     def OnAbout(self,e):
@@ -26,6 +28,6 @@ class MainWindow(wx.Frame):
     def OnExit(self,e):
         self.Close(True)
 
-app = wx.App()
+app = wx.App(False)
 frame = MainWindow(None, 'Sample editor')
 app.MainLoop()

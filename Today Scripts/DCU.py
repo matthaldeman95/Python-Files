@@ -3,29 +3,34 @@ import BeautifulSoup
 import newurllib2
 import datetime
 Soup = BeautifulSoup.BeautifulSoup
+
 response = newurllib2.urlopen('http://www.dcunited.com/standings').read()
 soup = Soup(response)
+classes = Soup(str(soup.findAll('tr')))
+
+for c in classes:
+    c = Soup(str(c))
+    #print c.prettify()
+    data = c.find("td", attrs={"data-title": "Club"})
+    if data:
+        data = data.contents
+        foo, data, bar = str(data).split("'")
+        if data=="D.C. United":
+            break
+        else: continue
+
+rank = str(c.find("td", attrs={"data-title": "Rank"}).contents)
+foo, rank, bar = rank.split("'")
+record = str(c.find("td", attrs={"data-title": "W-L-T"}).contents)
+foo, record, bar = record.split("'")
+"""
 month = ["blah", "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]
 
-if soup.find("tr", attrs={"class": "hub_club even"}):
-    dcrow = soup.find("tr", attrs={"class": "hub_club even"})
-elif soup.find("tr", attrs={"class": "hub_club odd"}):
-    dcrow = soup.find("tr", attrs={"class": "hub_club odd"})
-
-rank = str(dcrow.find("td", attrs={"data-title": "Rank"}).contents)
-foo, rank, bar = rank.split("'")
-gp = str(dcrow.find("td", attrs={"data-title": "Games Played"}).contents)
-foo, gp, bar = gp.split("'")
-w = str(dcrow.find("td", attrs={"data-title": "Wins"}).contents)
-foo, w, bar = w.split("'")
-l = str(dcrow.find("td", attrs={"data-title": "Losses"}).contents)
-foo, l, bar = l.split("'")
-t = str(dcrow.find("td", attrs={"data-title": "Ties"}).contents)
-foo, t, bar = t.split("'")
 
 response = newurllib2.urlopen('http://www.dcunited.com/schedule').read()
 soup = Soup(response)
 
+print soup
 
 games = soup.findAll("article", attrs={"class": "match_item featured twoclub"})
 soup = Soup(str(games[1]))
@@ -62,10 +67,12 @@ time, bar = time.split("PM")
 
 today = datetime.date.today()
 today = today.day
-
-print("Rank: %s East, Record: %s-%s-%s" % (rank, w, l, t))
+"""
+print("Rank: %s East, Record: %s" % (rank, record))
 print(" ")
+"""
 if d == today:
     print("Next match:  Today, %s PM" % (time))
 else:
     print("Next match: %s, %s %s, %s PM" % (day, m, d, time))
+"""

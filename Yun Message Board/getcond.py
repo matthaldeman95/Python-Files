@@ -2,7 +2,11 @@
 import BeautifulSoup
 import newurllib2
 Soup = BeautifulSoup.BeautifulSoup
-response = newurllib2.urlopen('http://weather.yahooapis.com/forecastrss?w=2425834').read()
+response = newurllib2.urlopen('http://api.openweathermap.org/data/2.5/weather?id=4809537&mode=xml&APPID=bbd9de04c7a74e6cbaaf0a144e69e167&units=imperial').read()
 soup = Soup(response)
-cond = soup.find("yweather:condition")['text']
-print cond
+#print soup.prettify()
+
+condition = soup.find('weather')['value']
+print condition
+
+
