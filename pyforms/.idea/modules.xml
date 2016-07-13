@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/GUIAttempt1.iml" filepath="$PROJECT_DIR$/.idea/GUIAttempt1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pyforms.iml" filepath="$PROJECT_DIR$/.idea/pyforms.iml" />
     </modules>
   </component>
 </project>
