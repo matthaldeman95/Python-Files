@@ -128,7 +128,7 @@ class Grid:
         return grid.grid
 
 if __name__ == '__main__':
-    """
+
     print "Type each line of puzzle, using spaces or tabs between columns and " \
           "enter at the end of each row:"
     line0 = raw_input('1:   ')
@@ -140,26 +140,7 @@ if __name__ == '__main__':
     line6 = raw_input('7    ')
     line7 = raw_input('8    ')
     line8 = raw_input('9    ')
-    """
-    line0 = '0 0 4 0 8 0 3 0 0'
-    line1 = '0 0 0 0 0 3 0 4 2'
-    line2 = '8 0 0 4 0 5 9 0 7'
-    line3 = '3 0 2 0 7 0 5 0 8'
-    line4 = '0 5 0 0 0 0 0 7 0'
-    line5 = '6 0 8 0 9 0 2 0 1'
-    line6 = '4 0 6 2 0 7 0 0 9'
-    line7 = '5 2 0 9 0 0 0 0 0'
-    line8 = '0 0 7 0 1 0 4 0 0'
 
-    line0 = '5 1 6 8 4 9 7 3 2'
-    line1 = '3 0 7 6 0 5 0 0 0'
-    line2 = '8 0 9 7 0 0 0 6 5'
-    line3 = '1 3 5 0 6 0 9 0 7'
-    line4 = '4 7 2 5 9 1 0 0 6'
-    line5 = '9 6 8 3 7 0 0 5 0'
-    line6 = '2 5 3 1 8 6 0 7 4'
-    line7 = '6 8 4 2 0 7 5 0 0'
-    line8 = '7 9 1 0 5 0 6 0 8'
     a = np.matrix('%s ;%s ;%s ;%s ;%s; %s; %s; %s; %s' % (line0,
                             line1, line2, line3, line4, line5, line6, line7, line8))
 
