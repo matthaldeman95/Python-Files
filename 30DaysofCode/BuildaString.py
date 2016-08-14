@@ -8,7 +8,7 @@ def buildaString(inString, A, B):
         foundin = False
         for rightind in range(len(inString), letter+1, -1):
             subString = inString[letter:rightind]
-            if subString in outString:
+            if subString in outString and B < (A*len(subString)):
                 outString += subString
                 cost += B
                 foundin = True
