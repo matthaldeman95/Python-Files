@@ -1,5 +1,4 @@
 import numpy as np
-
 class Grid:
     """
     Class for the Sudoku puzzle grid.  grid contains the puzzle with zeroes in place of
@@ -128,9 +127,8 @@ class Grid:
         return grid.grid
 
 if __name__ == '__main__':
-
     print "Type each line of puzzle, using spaces or tabs between columns and " \
-          "enter at the end of each row:"
+          "enter at the end of each row.  Substitute zeroes for blank cells:"
     line0 = raw_input('1:   ')
     line1 = raw_input('2:   ')
     line2 = raw_input('3    ')
@@ -143,6 +141,5 @@ if __name__ == '__main__':
 
     a = np.matrix('%s ;%s ;%s ;%s ;%s; %s; %s; %s; %s' % (line0,
                             line1, line2, line3, line4, line5, line6, line7, line8))
-
     grid = Grid(a)
     print grid.solvehelper()
