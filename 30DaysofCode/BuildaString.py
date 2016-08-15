@@ -1,40 +1,34 @@
 
 
-def buildaString(inString, A, B):
-    outString = ""
-    cost = 0
-    letter = 0
-    while letter <= len(inString)-1:
-        foundin = False
-        for rightind in range(len(inString), letter+1, -1):
-            subString = inString[letter:rightind]
-            if subString in outString and B < (A*len(subString)):
-                outString += subString
-                cost += B
-                foundin = True
-                letter += len(subString)
+def buildaString(str, A, B):
+    mint = [n * A for n in range(len(str),0,-1)]
+    mint.append(0)
+    for n in range(len(str)-1, -1, -1):
+        if mint[n+1] + A < mint[n]:
+            mint[n] = mint[n + 1] + A
+        for m in range(n,0,-1):
+            substr = str[m:n+1]
+            prestr = str[0:m]
+            if substr in prestr:
+                if(B + mint[n+1]) < mint[m] and B < (len(substr) * A):
+                    mint[m] = B + mint[n+1]
+            else:
                 break
-        if not foundin:
-            outString += inString[letter]
-            cost += A
-            letter += 1
-    return cost
+    return mint[0]
 
 A = []
 B = []
 inputString = []
 
 
-testcases = raw_input("Enter number of test cases:  ")
+testcases = raw_input()
 for n in range(0,int(testcases)):
-    digits = raw_input("Enter length of string, cost A, and cost B, "
-                       "separated by spaces:  ")
+    digits = raw_input()
     N, a, b = digits.split(" ")
     A.append(int(a))
     B.append(int(b))
-    inputString.append(raw_input("Type the string to build:  "))
+    inputString.append(raw_input())
 
 for n in range(0,len(A)):
     print buildaString(inputString[n], A[n], B[n])
-
 
