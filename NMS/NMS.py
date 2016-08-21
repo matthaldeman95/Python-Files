@@ -1,6 +1,7 @@
 from Tkinter import *
 import tkFont
 
+
 class InventoryWindow:
     def __init__(self, master, RW):
         n = 0
@@ -9,14 +10,14 @@ class InventoryWindow:
         self.keys = [[k] for k, v in sorted(inventory.iteritems())]
         for key in range(len(self.keys)/2):
             Label(master,text=self.keys[key][0]).grid(row=n,column=0,sticky=W)
-            self.keys[key].append(Entry(master))
+            self.keys[key].append(Entry(master, width = 10))
             self.keys[key][1].grid(row=n,column=1)
             self.keys[key][1].insert(0, inventory[self.keys[key][0]])
             n += 1
         n = 0
         for key in range(len(self.keys)/2,len(self.keys)):
             Label(master, text=self.keys[key][0]).grid(row=n, column=2, sticky=W)
-            self.keys[key].append(Entry(master))
+            self.keys[key].append(Entry(master,width=10))
             self.keys[key][1].grid(row=n, column=3)
             self.keys[key][1].insert(0, inventory[self.keys[key][0]])
             n += 1
@@ -44,7 +45,6 @@ class InventoryWindow:
             if 'A'.lower() in instruction.lower():
                 inventory[item] += int(quantity)
             elif 'R'.lower() in instruction.lower():
-                print "removing"
                 inventory[item] -= int(quantity)
             for key in range(len(self.keys)):
                 if item == self.keys[key][0]:
@@ -71,8 +71,44 @@ class RecipeWindow(Frame):
     def __init__(self, master):
         self.master = master
         self.customFont = tkFont.Font(family="Helvetica", size=12)
+        """
+        self.tc = Checkbutton(self.frame, text='Technology Components', variable=self.techcomp, command=self.refresh)
+        self.tc.select()
+
+        self.es = Checkbutton(self.frame, text='Energy Sources', variable=self.energys, command=self.refresh)
+        self.es.select()
+
+        self.ex = Checkbutton(self.frame, text='Exosuit Upgrades', variable=self.exos, command=self.refresh)
+        self.ex.select()
+
+        self.sh = Checkbutton(self.frame, text='Ship Upgrades', variable=self.ship, command=self.refresh)
+        self.sh.select()
+
+        self.mt = Checkbutton(self.frame, text='Multi-tool Upgrades', variable=self.mult, command=self.refresh)
+        self.mt.select()
+        """
+        self.technologycomponents = [r for r in TechnologyComponents]
+        self.techcomp = IntVar()
+
+
+        self.energysources = [r for r in EnergySources]
+        self.energys = IntVar()
+
+
+        self.exosuit = [r for r in Exosuit]
+        self.exos = IntVar()
+
+
+        self.shipups = [r for r in Ship]
+        self.ship = IntVar()
+
+
+        self.multitool = [r for r in Multitool]
+        self.mult = IntVar()
+
 
         self.generate()
+
 
 
     def onFrameConfigure(self, event):
@@ -114,7 +150,6 @@ class RecipeWindow(Frame):
 
     def update(self):
         n = 0
-        print "Updating..."
         if self.techcomp.get():
             Label(self.frame, text='Technology Components', fg='blue', font=self.customFont).grid(row=n, column=0, sticky=W)
             n = self.updater(self.frame,self.technologycomponents, n+1)
@@ -150,38 +185,29 @@ class RecipeWindow(Frame):
         self.canvas.create_window((4, 4), window=self.frame, anchor='nw', tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
 
+        self.tc = Checkbutton(self.frame, text='Technology Components', variable=self.techcomp, command=self.refresh)
+        #self.tc.select()
 
-        self.technologycomponents = [r for r in TechnologyComponents]
-        self.techcomp = IntVar()
-        tc = Checkbutton(self.frame, text='Technology Components', variable=self.techcomp, command=self.refresh)
-        tc.grid(row=0, column=10)
-        tc.select()
+        self.es = Checkbutton(self.frame, text='Energy Sources', variable=self.energys, command=self.refresh)
+        #self.es.select()
 
-        self.energysources = [r for r in EnergySources]
-        self.energys = IntVar()
-        es = Checkbutton(self.frame, text='Energy Sources', variable=self.energys, command=self.refresh)
-        es.grid(row=1, column=10)
-        es.select()
+        self.ex = Checkbutton(self.frame, text='Exosuit Upgrades', variable=self.exos, command=self.refresh)
+        #self.ex.select()
 
-        self.exosuit = [r for r in Exosuit]
-        self.exos = IntVar()
-        ex = Checkbutton(self.frame, text='Exosuit Upgrades', variable=self.exos, command=self.refresh)
-        ex.grid(row=2, column=10)
-        ex.select()
+        self.sh = Checkbutton(self.frame, text='Ship Upgrades', variable=self.ship, command=self.refresh)
+        #self.sh.select()
 
-        self.shipups = [r for r in Ship]
-        self.ship = IntVar()
-        sh = Checkbutton(self.frame, text='Ship Upgrades', variable=self.ship, command=self.refresh)
-        sh.grid(row=3, column=10)
-        sh.select()
+        self.mt = Checkbutton(self.frame, text='Multi-tool Upgrades', variable=self.mult, command=self.refresh)
+        #self.mt.select()
 
-        self.multitool = [r for r in Multitool]
-        self.mult = IntVar()
-        mt = Checkbutton(self.frame, text='Multi-tool Upgrades', variable=self.mult, command=self.refresh)
-        mt.grid(row=4, column=10)
-        mt.select()
+        self.tc.grid(row=0, column=10)
+        self.es.grid(row=1, column=10)
+        self.ex.grid(row=2, column=10)
+        self.sh.grid(row=3, column=10)
+        self.mt.grid(row=4, column=10)
 
         self.update()
+
 
 class Recipe:
     def __init__(self, name, element1, *args):
@@ -314,12 +340,11 @@ Multitool = []
 getInventory()
 root = Tk()
 RW = RecipeWindow(root)
-#RW.pack(side='top', fill='both', expand=True)
 IW = InventoryWindow(Tk(), RW)
 root.mainloop()
 outfile = open('inventory.csv', 'w')
+print "Saving inventory..."
 for k, v in sorted(inventory.iteritems()):
-    print k, v
     outfile.write('%s, %d\n'%(k,v))
 outfile.close()
 root.destroy()
