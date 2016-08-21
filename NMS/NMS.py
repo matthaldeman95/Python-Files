@@ -4,6 +4,7 @@ import tkFont
 class InventoryWindow:
     def __init__(self, master, RW):
         n = 0
+        self.master = master
         self.keys=[]
         self.keys = [[k] for k, v in sorted(inventory.iteritems())]
         for key in range(len(self.keys)/2):
@@ -28,6 +29,10 @@ class InventoryWindow:
         self.button.grid(row=n+1,column=1)
         master.bind('<Return>',self.returnKey)
         #master.bind('<Escape>',self.escapeKey)
+        self.destbutton = Button(
+            master, text='Close', fg='red', command=self.quitAll
+        )
+        self.destbutton.grid(row=n+1, column=2)
 
     def returnKey(self,event):
         if self.textfield.get():
@@ -56,52 +61,29 @@ class InventoryWindow:
         self.updateInventory()
         RecipeWindow.refresh(RW)
 
+    def quitAll(self):
+        self.master.quit()
 
 
-class RecipeWindow:
+
+
+class RecipeWindow(Frame):
     def __init__(self, master):
         self.master = master
         self.customFont = tkFont.Font(family="Helvetica", size=12)
-        self.frame=Frame(master,width=700,height=600)
-        self.frame.grid()
+
+        self.generate()
 
 
-
-        self.technologycomponents = [r for r in TechnologyComponents]
-        self.techcomp = IntVar()
-        tc = Checkbutton(self.frame, text='Technology Components', variable = self.techcomp, command=self.refresh)
-        tc.grid(row=0,column=10)
-        tc.select()
-
-        self.energysources = [r for r in EnergySources]
-        self.energys = IntVar()
-        es = Checkbutton(self.frame, text='Energy Sources', variable=self.energys, command=self.refresh)
-        es.grid(row=1,column=10)
-        es.select()
-
-        self.exosuit = [r for r in Exosuit]
-        self.exos = IntVar()
-        ex = Checkbutton(self.frame, text='Exosuit Upgrades', variable=self.exos, command=self.refresh)
-        ex.grid(row=2,column=10)
-        ex.select()
-
-        self.shipups = [r for r in Ship]
-        self.ship = IntVar()
-        sh = Checkbutton(self.frame, text='Ship Upgrades', variable=self.ship, command=self.refresh)
-        sh.grid(row=3, column=10)
-        sh.select()
-
-        self.multitool = [r for r in Multitool]
-        self.mult = IntVar()
-        mt = Checkbutton(self.frame, text='Multi-tool Upgrades', variable=self.mult, command=self.refresh)
-        mt.grid(row=4,column=10)
-        mt.select()
-
-        self.update()
+    def onFrameConfigure(self, event):
+        self.canvas.configure(scrollregion=self.canvas.bbox("all"))
 
     def refresh(self):
         self.frame.destroy()
-        self.update()
+        self.canvas.destroy()
+        self.vsb.destroy()
+
+        self.generate()
 
 
 
@@ -132,9 +114,7 @@ class RecipeWindow:
 
     def update(self):
         n = 0
-        self.frame = Frame(self.master)
-        s = Scrollbar(self.frame).grid(row=0,column=15)
-        self.frame.grid()
+        print "Updating..."
         if self.techcomp.get():
             Label(self.frame, text='Technology Components', fg='blue', font=self.customFont).grid(row=n, column=0, sticky=W)
             n = self.updater(self.frame,self.technologycomponents, n+1)
@@ -158,6 +138,51 @@ class RecipeWindow:
     def make(self, element):
         print "Creating", element
 
+    def generate(self):
+        Frame.__init__(self, self.master)
+
+        self.canvas = Canvas(self.master, width=1000, height=600)
+        self.frame = Frame(self.canvas)
+        self.vsb = Scrollbar(self.master, orient=VERTICAL, command=self.canvas.yview)
+        self.canvas.configure(yscrollcommand=self.vsb.set)
+        self.vsb.pack(side='right', fill='y')
+        self.canvas.pack(side='left', fill='both', expand=True)
+        self.canvas.create_window((4, 4), window=self.frame, anchor='nw', tags="self.frame")
+        self.frame.bind("<Configure>", self.onFrameConfigure)
+
+
+        self.technologycomponents = [r for r in TechnologyComponents]
+        self.techcomp = IntVar()
+        tc = Checkbutton(self.frame, text='Technology Components', variable=self.techcomp, command=self.refresh)
+        tc.grid(row=0, column=10)
+        tc.select()
+
+        self.energysources = [r for r in EnergySources]
+        self.energys = IntVar()
+        es = Checkbutton(self.frame, text='Energy Sources', variable=self.energys, command=self.refresh)
+        es.grid(row=1, column=10)
+        es.select()
+
+        self.exosuit = [r for r in Exosuit]
+        self.exos = IntVar()
+        ex = Checkbutton(self.frame, text='Exosuit Upgrades', variable=self.exos, command=self.refresh)
+        ex.grid(row=2, column=10)
+        ex.select()
+
+        self.shipups = [r for r in Ship]
+        self.ship = IntVar()
+        sh = Checkbutton(self.frame, text='Ship Upgrades', variable=self.ship, command=self.refresh)
+        sh.grid(row=3, column=10)
+        sh.select()
+
+        self.multitool = [r for r in Multitool]
+        self.mult = IntVar()
+        mt = Checkbutton(self.frame, text='Multi-tool Upgrades', variable=self.mult, command=self.refresh)
+        mt.grid(row=4, column=10)
+        mt.select()
+
+        self.update()
+
 class Recipe:
     def __init__(self, name, element1, *args):
         self.name = name
@@ -178,6 +203,7 @@ class Recipe:
         else:
             return True
         return
+
 
 inventory = {'Iron': 0,
              'Zinc': 0,
@@ -218,6 +244,16 @@ inventory = {'Iron': 0,
              'Albumen Pearl': 0,
              }
 
+def getInventory():
+    try:
+        infile = open('inventory.csv')
+        for line in infile:
+            k, v = line.split(',')
+            inventory[k] = int(v)
+    finally:
+        pass
+
+
 
 CariteSheet = Recipe('Carite Sheet',('Iron',50))
 MicrodensityFabric = Recipe('Microdensity Fabric', ('Iron', 50), ('Platinum', 10))
@@ -239,28 +275,51 @@ WarpCell = Recipe('Warp Cell', ('Thamium9', 100), ('Antimatter', 1))
 EnergySources = [ShieldingShard, ShieldingPlate, PowerGel, PowerCanister,
                  UnstablePlasma, WarpCell]
 
+AerationSigma = Recipe('Aeration Membrane Sigma', ('Iron', 50), ('Carbon', 100))
+AerationTau = Recipe('Aeration Membrane Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
+AerationTheta = Recipe('Aeration Membrane Theta', ('Microdensity Fabric', 2), ('Electron Vapor', 1), ('Gravitino Ball', 1))
+CoolantNetworkSigma = Recipe('Coolant Network Sigma', ('Iron', 50), ('Carbon', 100))
+CoolantNetworkTau = Recipe('Coolant Network Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
+CoolantNetworkTheta = Recipe('Coolant Network Theta', ('Microdensity Fabric', 2), ('Electron Vapor', 1), ('Gravitino Ball', 1))
 HealthSigma = Recipe('Health Sigma', ('Iron', 50), ('Plutonium', 50), ('Zinc', 10))
 HealthTau = Recipe('Health Tau', ('Aluminium', 150), ('Carbon', 250), ('Thamium9', 50))
 HealthTheta = Recipe('Health Theta', ('Aluminium', 200), ('Plutonium', 250), ('Thamium9', 300))
+JetpackSigma = Recipe('Jetpack Booster Sigma', ('Carite Sheet', 1), ('Platinum', 15),('Zinc', 10))
+JetpackTheta = Recipe('Jetpack Booster Theta', ('Omegon', 50), ('Chrysonite', 300), ('Plutonium', 300))
+LifeSupportSigma = Recipe('Life Support Sigma', ('Plutonium', 50), ('Platinum', 20))
+RadiationSigma = Recipe('Radiation Deflector Sigma', ('Iron', 50), ('Carbon', 100))
+RadiationTau = Recipe('Radiation Deflector Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
+RadiationTheta = Recipe('Radiation Deflector Theta', ('Microdensity Fabric', 2), ('Electron Vapor', 1), ('Gravitino Ball', 1))
+ShieldboostSigma = Recipe('Shieldboost Sigma', ('Zinc', 15), ('Platinum', 15), ('Thamium9', 15))
+ShieldboostTau = Recipe('Shieldboost Tau', ('Zinc', 100), ('Platinum', 100), ('Gold', 50))
+ShieldboostTheta = Recipe('Shieldboost Theta', ('Chrysonite', 300), ('Microdensity Fabric', 2))
+StaminaSigma = Recipe('Stamina Sigma', ('Iron', 20), ('Carbon', 20))
+StaminaTheta = Recipe('Stamina Theta', ('Zinc', 150), ('Heridium', 150), ('Plutonium', 50))
+ThermicSigma = Recipe('Thermic Layer Sigma', ('Iron', 50), ('Carbon', 100))
+ThermicTau = Recipe('Thermic Layer Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
+ThermicTheta = Recipe('Thermic Layer Theta', ('Microdensity Fabric', 2), ('Electron Vapor', 1), ('Gravitino Ball', 1))
+ToxinSigma = Recipe('Toxin Suppressor Sigma', ('Iron', 50), ('Carbon', 100))
+ToxinTau = Recipe('Toxin Suppressor Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
 
-Exosuit = [HealthSigma, HealthTau, HealthTheta]
+Exosuit = [AerationSigma, AerationTau, AerationTheta, CoolantNetworkSigma, CoolantNetworkTau, CoolantNetworkTheta,
+           HealthSigma, HealthTau, HealthTheta, JetpackSigma, JetpackTheta, LifeSupportSigma,
+           RadiationSigma, RadiationTau, RadiationTheta, ShieldboostSigma, ShieldboostTau, ShieldboostTheta,
+           StaminaSigma, StaminaTheta, ThermicSigma, ThermicTau, ThermicTheta,
+           ToxinSigma, ToxinTau]
 
 Ship = []
 
 Multitool = []
 
-
-
+getInventory()
 root = Tk()
 RW = RecipeWindow(root)
-
+#RW.pack(side='top', fill='both', expand=True)
 IW = InventoryWindow(Tk(), RW)
 root.mainloop()
-
+outfile = open('inventory.csv', 'w')
+for k, v in sorted(inventory.iteritems()):
+    print k, v
+    outfile.write('%s, %d\n'%(k,v))
+outfile.close()
 root.destroy()
-
-
-
-
-
-
