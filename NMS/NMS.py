@@ -72,9 +72,10 @@ class InventoryWindow:
                         rec.pinned = not rec.pinned
 
         for key in range(len(self.keys)):
+            inventory[self.keys[key][0]] = self.keys[key][1].get()
             self.keys[key][1].delete(0, END)
             self.keys[key][1].insert(0, inventory[self.keys[key][0]])
-        self.textfield.delete(0, END)
+        #self.textfield.delete(0, END)
         self.updateInventory()
         RecipeWindow.refresh(RW)
 
@@ -96,27 +97,14 @@ class RecipeWindow(Frame):
     def __init__(self, master):
         self.master = master
         self.customFont = tkFont.Font(family="Helvetica", size=12)
-        """
-        self.tc = Checkbutton(self.frame, text='Technology Components', variable=self.techcomp, command=self.refresh)
-        self.tc.select()
 
-        self.es = Checkbutton(self.frame, text='Energy Sources', variable=self.energys, command=self.refresh)
-        self.es.select()
-
-        self.ex = Checkbutton(self.frame, text='Exosuit Upgrades', variable=self.exos, command=self.refresh)
-        self.ex.select()
-
-        self.sh = Checkbutton(self.frame, text='Ship Upgrades', variable=self.ship, command=self.refresh)
-        self.sh.select()
-
-        self.mt = Checkbutton(self.frame, text='Multi-tool Upgrades', variable=self.mult, command=self.refresh)
-        self.mt.select()
-        """
         self.spec = IntVar()
-        self.technocompon = [r for r in TechnologyComponents]
-        self.energysources = [r for r in EnergySources]
-        self.techcomp = IntVar()
-        self.energys = IntVar()
+        self.comp = [r for r in Components]
+        self.compvar = IntVar()
+        self.devices = [r for r in Devices]
+        self.devicesvar = IntVar()
+        self.consumables = [r for r in Consumables]
+        self.consvar = IntVar()
 
         self.exos = IntVar()
         self.exohealth = [r for r in Health]
@@ -216,10 +204,12 @@ class RecipeWindow(Frame):
 
         if self.spec.get():
             Label(self.frame, text='Special Parts', fg='blue', font=self.customFont).grid(row=n+2, column=0, sticky=W)
-            Checkbutton(self.frame, text='Technology Components', variable=self.techcomp, command=self.refresh).grid(row=n+3, column=0,sticky=W)
-            n = self.subgroupupdater(self.frame,self.technocompon, n+3, 'Technology Components', self.techcomp.get())
-            Checkbutton(self.frame, text='Energy Sources', variable=self.energys, command=self.refresh).grid(row=n+1, column=0, sticky=W)
-            n = self.subgroupupdater(self.frame,self.energysources, n+1, 'Energy Sources', self.energys.get())
+            Checkbutton(self.frame, text='Components', variable=self.compvar, command=self.refresh).grid(row=n+3, column=0,sticky=W)
+            n = self.subgroupupdater(self.frame,self.comp, n+3, 'Technology Components', self.compvar.get())
+            Checkbutton(self.frame, text='Devices', variable=self.devicesvar, command=self.refresh).grid(row=n+1, column=0, sticky=W)
+            n = self.subgroupupdater(self.frame,self.devices, n+1, 'Devices', self.devicesvar.get())
+            Checkbutton(self.frame, text='Consumables', variable=self.consvar, command=self.refresh).grid(row=n+1, column=0, sticky=W)
+            n = self.subgroupupdater(self.frame,self.consumables, n+1, 'Consumables', self.consvar.get())
 
         if self.exos.get():
             Label(self.frame, text='Exosuit Upgrades', fg='blue', font=self.customFont).grid(row=n+2, column=0, sticky=W)
@@ -269,7 +259,6 @@ class RecipeWindow(Frame):
         self.tc = Checkbutton(self.frame, text='Special Parts', variable=self.spec, command=self.refresh)
         #self.tc.select()
 
-        self.es = Checkbutton(self.frame, text='Energy Sources', variable=self.energys, command=self.refresh)
         #self.es.select()
 
         self.ex = Checkbutton(self.frame, text='Exosuit Upgrades', variable=self.exos, command=self.refresh)
@@ -354,7 +343,9 @@ inventory = {'Iron': 0,
              'Dimensional Matrix': 0,
              'Vortex Cube': 0,
              'Neutrino Module': 0,
-             'AquaSphere': 0
+             'AquaSphere': 0,
+             'Herox': 0,
+             'Aronium': 0
              }
 
 def getInventory():
@@ -529,21 +520,31 @@ ElectronVapor = Recipe('Electron Vapor', ('Suspension Fluid', 1), ('Plutonium', 
 SuspensionFluid = Recipe('Suspension Fluid', ('Carbon', 50))
 Antimatter = Recipe('Antimatter', ('Electron Vapor', 1), ('Heridium', 50), ('Zinc', 20))
 DynamicResonator = Recipe('Dynamic Resonator', ('Antimatter', 2), ('Chrysonite', 100), ('Microdensity Fabric',4))
+Terumin = Recipe('Terumin', ('Emeril', 40), ('Gold', 40), ('Herox', 1))
+Grantine = Recipe('Grantine', ('Iridium', 150), ('Copper', 50), ('Aronium', 1))
 
-TechnologyComponents = [CariteSheet, MicrodensityFabric, ElectronVapor,SuspensionFluid,
-           Antimatter, DynamicResonator]
+
+Components = [CariteSheet, MicrodensityFabric, ElectronVapor,SuspensionFluid,
+           Antimatter, DynamicResonator, Terumin, Grantine]
+
+BypassChip = Recipe('Bypass Chip', ('Plutonium', 10), ('Iron', 10))
+AtlasPassV1 = Recipe('AtlasPass V1', ('Iron', 25), ('Heridium', 10))
+
+Devices = [BypassChip, AtlasPassV1]
 
 ShieldingShard = Recipe('Shielding Shard', ('Iron', 25))
 ShieldingPlate = Recipe('Shielding Plate', ('Iron', 50))
+ShieldingSheet = Recipe('Shielding Sheet', ('Iron', 75))
 PowerGel = Recipe('Power Gel', ('Carbon', 25))
 PowerCanister = Recipe('Power Canister', ('Carbon', 50))
+PowerReservoir = Recipe('Power Reservoir', ('Carbon', 75))
 UnstablePlasma = Recipe('Unstable Plasma', ('Thamium9', 400), ('Plutonium', 200))
 WarpCell = Recipe('Warp Cell', ('Thamium9', 100), ('Antimatter', 1))
 
-EnergySources = [ShieldingShard, ShieldingPlate, PowerGel, PowerCanister,
-                 UnstablePlasma, WarpCell]
+Consumables = [ShieldingShard, ShieldingPlate, ShieldingSheet, PowerGel, PowerCanister,
+                PowerReservoir, UnstablePlasma, WarpCell]
 
-Special = [TechnologyComponents, EnergySources]
+Products = [Components, Devices, Consumables]
 
 Recipes = [HealthSigma, HealthTau, HealthTheta, ShieldboostSigma, ShieldboostTau,
            ShieldboostTheta, CoolantNetworkSigma, CoolantNetworkTau, CoolantNetworkTheta,
@@ -569,7 +570,8 @@ Recipes = [HealthSigma, HealthTau, HealthTheta, ShieldboostSigma, ShieldboostTau
            Propulsion, PropulsionTau, Rebound, ReboundTau, RangeBoostSigma, RangeBoostTau,
            AnalysisVisor, Scanner, ScanRangeBoostSigma, ScanRangeBoostTau, CariteSheet,
            MicrodensityFabric, ElectronVapor,SuspensionFluid, Antimatter, DynamicResonator,
-           ShieldingShard, ShieldingPlate, PowerGel, PowerCanister, UnstablePlasma, WarpCell]
+           ShieldingShard, ShieldingPlate, PowerGel, PowerCanister, UnstablePlasma, WarpCell,
+           Terumin, Grantine, ShieldingSheet, PowerReservoir, BypassChip, AtlasPassV1]
 
 
 
