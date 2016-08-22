@@ -293,18 +293,17 @@ inventory = {'Iron': 0,
              'Suspension Fluid': 0,
              'Antimatter': 0,
              'Dynamic Resonator': 0,
-             'Night Crystals': 0,
              'Shielding Shard': 0,
              'Shielding Plate': 0,
              'Power Gel': 0,
              'Power Canister': 0,
              'Unstable Plasma': 0,
              'Warp Cell': 0,
-             "Vy'keen Effigy": 0,
-             'Korvax Convergence Cube': 0,
-             'Korvax Casing': 0,
              'Gravitino Ball': 0,
-             'Albumen Pearl': 0,
+             'Dimensional Matrix': 0,
+             'Vortex Cube': 0,
+             'Neutrino Module': 0,
+             'AquaSphere': 0
              }
 
 def getInventory():
@@ -318,52 +317,158 @@ def getInventory():
 
 
 
-
-
-AerationSigma = Recipe('Aeration Membrane Sigma', ('Iron', 50), ('Carbon', 100))
-AerationTau = Recipe('Aeration Membrane Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
-AerationTheta = Recipe('Aeration Membrane Theta', ('Microdensity Fabric', 2), ('Electron Vapor', 1), ('Gravitino Ball', 1))
-CoolantNetworkSigma = Recipe('Coolant Network Sigma', ('Iron', 50), ('Carbon', 100))
-CoolantNetworkTau = Recipe('Coolant Network Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
-CoolantNetworkTheta = Recipe('Coolant Network Theta', ('Microdensity Fabric', 2), ('Electron Vapor', 1), ('Gravitino Ball', 1))
-HealthSigma = Recipe('Health Sigma', ('Iron', 50), ('Plutonium', 50), ('Zinc', 10))
-HealthTau = Recipe('Health Tau', ('Aluminium', 150), ('Carbon', 250), ('Thamium9', 50))
-HealthTheta = Recipe('Health Theta', ('Aluminium', 200), ('Plutonium', 250), ('Thamium9', 300))
-JetpackSigma = Recipe('Jetpack Booster Sigma', ('Carite Sheet', 1), ('Platinum', 15),('Zinc', 10))
-JetpackTheta = Recipe('Jetpack Booster Theta', ('Omegon', 50), ('Chrysonite', 300), ('Plutonium', 300))
-LifeSupportSigma = Recipe('Life Support Sigma', ('Plutonium', 50), ('Platinum', 20))
-RadiationSigma = Recipe('Radiation Deflector Sigma', ('Iron', 50), ('Carbon', 100))
-RadiationTau = Recipe('Radiation Deflector Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
-RadiationTheta = Recipe('Radiation Deflector Theta', ('Microdensity Fabric', 2), ('Electron Vapor', 1), ('Gravitino Ball', 1))
 ShieldboostSigma = Recipe('Shieldboost Sigma', ('Zinc', 15), ('Platinum', 15), ('Thamium9', 15))
 ShieldboostTau = Recipe('Shieldboost Tau', ('Zinc', 100), ('Platinum', 100), ('Gold', 50))
 ShieldboostTheta = Recipe('Shieldboost Theta', ('Chrysonite', 300), ('Microdensity Fabric', 2))
-StaminaSigma = Recipe('Stamina Sigma', ('Iron', 20), ('Carbon', 20))
-StaminaTheta = Recipe('Stamina Theta', ('Zinc', 150), ('Heridium', 150), ('Plutonium', 50))
+HealthSigma = Recipe('Health Sigma', ('Iron', 50), ('Plutonium', 50), ('Zinc', 10))
+HealthTau = Recipe('Health Tau', ('Aluminium', 150), ('Carbon', 250), ('Thamium9', 50))
+HealthTheta = Recipe('Health Theta', ('Aluminium', 200), ('Plutonium', 250), ('Thamium9', 300))
+
+CoolantNetworkSigma = Recipe('Coolant Network Sigma', ('Iron', 50), ('Carbon', 100))
+CoolantNetworkTau = Recipe('Coolant Network Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
+CoolantNetworkTheta = Recipe('Coolant Network Theta', ('Microdensity Fabric', 2), ('Electron Vapor', 1), ('Gravitino Ball', 1))
+RadiationSigma = Recipe('Radiation Deflector Sigma', ('Iron', 50), ('Carbon', 100))
+RadiationTau = Recipe('Radiation Deflector Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
+RadiationTheta = Recipe('Radiation Deflector Theta', ('Microdensity Fabric', 2), ('Electron Vapor', 1), ('Gravitino Ball', 1))
 ThermicSigma = Recipe('Thermic Layer Sigma', ('Iron', 50), ('Carbon', 100))
 ThermicTau = Recipe('Thermic Layer Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
 ThermicTheta = Recipe('Thermic Layer Theta', ('Microdensity Fabric', 2), ('Electron Vapor', 1), ('Gravitino Ball', 1))
 ToxinSigma = Recipe('Toxin Suppressor Sigma', ('Iron', 50), ('Carbon', 100))
 ToxinTau = Recipe('Toxin Suppressor Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
 
+AerationSigma = Recipe('Aeration Membrane Sigma', ('Iron', 50), ('Carbon', 100))
+AerationTau = Recipe('Aeration Membrane Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
+AerationTheta = Recipe('Aeration Membrane Theta', ('Microdensity Fabric', 2), ('Electron Vapor', 1), ('Gravitino Ball', 1))
+StaminaSigma = Recipe('Stamina Sigma', ('Iron', 20), ('Carbon', 20))
+StaminaTau = Recipe('Stamina Tau', ('Iron', 100), ('Heridium', 150), ('Plutonium', 50))
+StaminaTheta = Recipe('Stamina Theta', ('Zinc', 150), ('Heridium', 150), ('Plutonium', 50))
 
-Health = []
-Protection = []
-Stamina = []
-Utilities = []
+JetpackSigma = Recipe('Jetpack Booster Sigma', ('Carite Sheet', 1), ('Platinum', 15),('Zinc', 10))
+JetpackTau = Recipe('Jetpack Booster Tau', ('Chrysonite', 150), ('Titanium', 150), ('Plutonium', 150))
+JetpackTheta = Recipe('Jetpack Booster Theta', ('Omegon', 50), ('Chrysonite', 300), ('Plutonium', 300))
+LifeSupportSigma = Recipe('Life Support Sigma', ('Plutonium', 50), ('Platinum', 20))
+LifeSupportTau = Recipe('Life Support Tau', ('Plutonium', 50), ('Platinum', 150))
+
+
+
+Health = [HealthSigma, HealthTau, HealthTheta, ShieldboostSigma, ShieldboostTau, ShieldboostTheta]
+Protection = [CoolantNetworkSigma, CoolantNetworkTau, CoolantNetworkTheta,RadiationSigma, RadiationTau, RadiationTheta,
+              ThermicSigma, ThermicTau, ThermicTheta, ToxinSigma, ToxinTau]
+Stamina = [AerationSigma, AerationTau, AerationTheta, StaminaSigma, StaminaTau, StaminaTheta]
+Utilities = [JetpackSigma, JetpackTau, JetpackTheta, LifeSupportSigma, LifeSupportTau]
 Exosuit = [Health, Protection, Stamina, Utilities]
 
-Weapons = []
-ShipHealth = []
+
+
+AcceleratedFireSigma = Recipe('Accelerated Fire Sigma', ('Iron', 50), ('Aluminium', 100))
+AcceleratedFireTau = Recipe('Accelerated Fire Tau', ('Nickel', 100), ('Platinum', 100))
+AcceleratedFireTheta = Recipe('Accelerated Fire Theta', ('Thamium9', 300), ('Iron', 300), ('Dimensional Matrix', 3))
+AdvancedCoolingSigma = Recipe('Advanced Cooling Sigma', ('Thamium9', 30), ('Chrysonite', 30), ('Iron', 50))
+AdvancedCoolingTau = Recipe('Advanced Cooling Tau', ('Thamium9', 80), ('Chrysonite', 70), ('Iridium', 120))
+AdvancedCoolingTheta = Recipe('Advanced Cooling Theta', ('Thamium9', 200), ('Chrysonite', 250), ('Gravitino Ball', 10))
+BeamImpactSigma = Recipe('Beam Impact Sigma', ('Thamium9', 50), ('Chrysonite', 50))
+BeamImpactTau = Recipe('Beam Impact Tau', ('Thamium9', 200), ('Copper', 50), ('Carbon', 50))
+BeamImpactTheta = Recipe('Beam Impact Theta', ('Omegon', 100), ('Vortex Cube', 3), ('Carbon', 50))
+CannonDamageSigma = Recipe('Cannon Damage Sigma', ('Iron', 50), ('Thamium9', 50))
+CannonDamageTau = Recipe('Cannon Damage Tau', ('Iridium', 100), ('Copper', 50), ('Zinc', 50))
+CannonDamageTheta = Recipe('Cannon Damage Theta', ('Omegon', 100), ('Gold', 50), ('Zinc', 50))
+PhaseBeam = Recipe('Phase Beam', ('Iron', 30), ('Heridium', 30), ('Thamium9', 30))
+PhaseCoolantSigma = Recipe('Phase Coolant Sigma', ('Microdensity Fabric', 2), ('Thamium9', 200), ('Platinum', 25))
+PhaseCoolantTau = Recipe('Phase Coolant Tau', ('Heridium', 150), ('Thamium9', 200), ('Platinum', 50))
+PhaseCoolantTheta = Recipe('Phase Coolant Theta', ('Dimensional Matrix', 1), ('Thamium9', 200), ('Copper', 200))
+
+DeflectionEnhancementSigma = Recipe('Deflection Enhancement Sigma', ('Carite Sheet', 6), ('Heridium', 500))
+DeflectionEnhancementTau = Recipe('Deflection Enhancement Tau', ('Titanium', 200), ('Heridium', 250), ('Iron', 300))
+DeflectionEnhancementTheta = Recipe('Deflection Enhancement Theta', ('Zinc', 300), ('Platinum', 80), ('Emeril', 200))
+
+PhotonixCore = Recipe('Photonix Core', ('Chrysonite', 100), ('Iron', 200), ('Zinc', 50))
+PulseJetTau = Recipe('Pulse Jet Tau', ('Nickel', 100), ('Thamium9', 50), ('Neutrino Module', 2))
+PulseJetSigma = Recipe('Pulse Jet Sigma', ('Chrysonite', 100), ('Iron', 200), ('Zinc', 50))
+WarpReactorSigma = Recipe('Warp Reactor Sigma', ('Dynamic Resonator', 1), ('Iridium', 200), ('Copper', 400))
+WarpReactorTau = Recipe('Warp Reactor Tau', ('Dynamic Resonator', 2), ('Nickel', 600), ('Aluminium', 800))
+WarpReactorTheta = Recipe('Warp Reactor Theta', ('Dynamic Resonator', 3), ('Gold', 1000), ('Emeril', 1000))
+
+
+Weapons = [AcceleratedFireTau, AcceleratedFireSigma, AcceleratedFireTheta, AdvancedCoolingSigma, AdvancedCoolingTau,
+           AdvancedCoolingTheta, BeamImpactSigma, BeamImpactTau, BeamImpactTheta,CannonDamageSigma, CannonDamageTau,
+           CannonDamageTheta, PhaseBeam, PhaseCoolantSigma, PhaseCoolantTau, PhaseCoolantTheta]
+
+ShipHealth = [DeflectionEnhancementSigma, DeflectionEnhancementTau, DeflectionEnhancementTheta]
 ShipScan = []
-Hyperdrive = []
+Hyperdrive = [PulseJetTau, PulseJetSigma, WarpReactorSigma, WarpReactorTau, WarpReactorSigma, PhotonixCore]
 
 Ship = [Weapons, ShipHealth, ShipScan, Hyperdrive]
 
-Laser = []
-Projectile = []
-Grenade = []
-ToolScan = []
+BeamCoolantSigma = Recipe('Beam Coolant Sigma', ('Iridium', 50), ('Heridium', 20))
+BeamCoolantTau = Recipe('Beam Coolant Tau', ('Iridium', 200), ('Heridium', 100))
+BeamCoolantTheta = Recipe('Beam Coolant Theta', ('Aluminium', 200), ('Heridium', 100))
+BeamFocusSigma = Recipe('Beam Focus Sigma', ('Iron', 20), ('Heridium', 20), ('Plutonium', 25))
+BeamFocusTau = Recipe('Beam Focus Tau', ('Plutonium', 50), ('Chrysonite', 100))
+BeamFocusTheta = Recipe('Beam Focus Theta', ('Plutonium', 50), ('Chrysonite', 200), ('Platinum', 200))
+BeamIntensifierSigma = Recipe('Beam Intensifier Sigma', ('Titanium', 30), ('Plutonium', 25))
+BeamIntensifierTau = Recipe('Beam Intensifier Tau', ('Copper', 60), ('Iron', 200))
+BeamIntensifierTheta = Recipe('Beam Intensifier Theta', ('Copper', 120), ('Iron', 100), ('Iridium', 100))
+#BeamIntensifierTheta = Recipe('Beam Intensifier Theta', ('Copper', 120), ('Iron', 100), 'Iridium', 100)
+CombatAmpSigma = Recipe('Combat Amplifier Sigma', ('Titanium', 30), ('Carbon', 30))
+CombatAmpTau = Recipe('Combat Amplifier Tau', ('Platinum', 200), ('Titanium', 50), ('Chrysonite', 50))
+CombatAmpTheta = Recipe('Combat Amplifier Theta', ('Heridium', 400), ('Iron', 200), ('Radnox', 20))
+CombatAmpOmega = Recipe('Combat Amplifier Omega', ('Heridium', 400), ('Iron', 200), ('Gold', 100))
+Railshot = Recipe('Railshot Adapter', ('Aluminium', 100), ('Copper', 50), ('Iron', 200))
+
+Boltcaster = Recipe('Boltcaster', ('Iron', 25), ('Plutonium', 25))
+BoltcasterClipSigma = Recipe('Boltcaster ClipSigma', ('Plutonium', 50), ('Titanium', 20), ('Microdensity Fabric', 2))
+BoltcasterSM = Recipe('Boltcaster SM', ('Iridium', 50), ('Iron', 50), ('Platinum', 100))
+Homingbolt = Recipe('Homingbolt Adapter', ('AquaSphere', 5), ('Titanium', 200), ('Plutonium', 200))
+ImpactDamageSigma = Recipe('Impact Damage Sigma', ('Iridium', 50), ('Iron', 50), ('Platinum', 100))
+ImpactDamageTau = Recipe('Impact Damage Tau', ('Iridium', 50), ('Iron', 50), ('Platinum', 100))
+ImpactDamageTheta = Recipe('Impact Damage Theta', ('Iridium', 200), ('Radnox', 80), ('Platinum', 200))
+ImpactDamageOmega = Recipe('Impact Damage Omega', ('Copper', 200), ('Aluminium', 200), ('Heridium', 400))
+PlasmaClipSigma = Recipe('Plasma Clip Sigma', ('Plutonium', 50), ('Titanium', 20), ('Microdensity Fabric', 2))
+PlasmaClipTau = Recipe('Plasma Clip Tau', ('Plutonium', 50), ('Zinc', 20), ('Nickel', 10))
+PlasmaClipTheta = Recipe('Plasma Clip Theta', ('Plutonium', 50), ('Zinc', 50), ('Nickel', 150))
+RapidfireSigma = Recipe('Rapidfire Sigma', ('Nickel', 50), ('Iron', 20))
+RapidfireTau = Recipe('Rapidfire Tau', ('Titanium', 200), ('Platinum', 100), ('Aluminium', 100))
+RapidfireTheta = Recipe('Rapidfire Theta', ('Aluminium', 100), ('Platinum', 200))
+RecoilSigma = Recipe('Recoil Stabilizer Sigma', ('Thamium9', 100), ('Titanium', 50), ('Chrysonite', 50))
+RecoilTau = Recipe('Recoil Stabilizer Tau', ('Thamium9', 200), ('Titanium', 100), ('Chrysonite', 150))
+RecoilTheta = Recipe('Recoil Stabilizer Theta', ('Heridium', 250), ('Zinc', 100), ('Platinum', 150))
+ReloadSigma = Recipe('Reload Accelerant Sigma', ('Iron', 20), ('Heridium', 15), ('Zinc', 10))
+ReloadTau = Recipe('Reload Accelerant Tau', ('Chrysonite', 50), ('Zinc', 100), ('Plutonium', 50))
+ReloadTheta = Recipe('Reload Accelerant Theta', ('Calium', 50), ('Zinc', 100), ('Plutonium', 50))
+RicochetSigma = Recipe('Ricochet Sigma', ('Platinum', 100), ('Iron', 200), ('Heridium', 200))
+RicochetTau = Recipe('Ricochet Tau', ('Platinum', 300), ('Zinc', 150), ('Microdensity Fabric', 1))
+RicochetTheta = Recipe('Ricochet Theta', ('Gold', 100), ('Plutonium', 100), ('Platinum', 100))
+Shortburst = Recipe('Shortburst Adapter', ('Copper', 60), ('Heridium', 100), ('Zinc', 20))
+Wideshot = Recipe('Wideshot Adapter', ('Copper', 40), ('Heridium', 100), ('Iron', 50))
+
+PlasmaLauncher = Recipe('Plasma Launcher', ('Plutonium', 30), ('Heridium', 20), ('Carbon', 15))
+DamageRadius = Recipe('Damage Radius', ('Zinc', 100), ('Iron', 50), ('Chrysonite', 150))
+DamageRadiusTau = Recipe('Damage Radius Tau', ('Plutonium', 200), ('Emeril', 50))
+Homing = Recipe('Homing', ('Aluminium', 100), ('Iron', 50), ('Gold', 100))
+IntensitySigma = Recipe('Intensity Sigma', ('Thamium9', 150), ('Zinc', 20), ('Heridium', 200))
+IntensityTau = Recipe('Intensity Tau', ('Iron', 200), ('Aluminium', 200), ('Nickel', 200))
+IntensityTheta = Recipe('Intensity Theta', ('Neutrino Module', 4), ('Aluminium', 200), ('Nickel', 200))
+Propulsion = Recipe('Propulsion', ('Zinc', 10), ('Platinum', 20), ('Chrysonite', 15))
+PropulsionTau = Recipe('Propulsion Tau', ('Thamium9', 150), ('Zinc', 20), ('Chrysonite', 150))
+Rebound = Recipe('Rebound', ('Zinc', 10), ('Platinum', 20), ('Chrysonite', 15))
+ReboundTau = Recipe('Rebound Tau', ('Heridium', 200), ('Titanium', 200), ('Chrysonite', 250))
+RangeBoostSigma = Recipe('RangeBoost Sigma', ('Thamium9', 30), ('Platinum', 15), ('Carbon', 30))
+RangeBoostTau = Recipe('RangeBoost Tau', ('Thamium9', 120), ('Chrysonite', 120), ('Plutonium', 200))
+
+AnalysisVisor = Recipe('Analysis Visor', ('Iron', 50))
+Scanner = Recipe('Scanner', ('Carbon', 50))
+ScanRangeBoostSigma = Recipe('RangeBoost Sigma', ('Thamium9', 30), ('Platinum', 15), ('Carbon', 30))
+ScanRangeBoostTau = Recipe('RangeBoost Tau', ('Thamium9', 120), ('Chrysonite', 120), ('Plutonium', 200))
+
+Laser = [BeamCoolantSigma, BeamCoolantTau, BeamCoolantTheta,BeamFocusSigma, BeamFocusTau, BeamFocusTheta, BeamIntensifierSigma,
+         BeamIntensifierTau, BeamIntensifierTheta, CombatAmpSigma, CombatAmpTau, CombatAmpTheta, CombatAmpOmega, Railshot]
+Projectile = [Boltcaster, BoltcasterClipSigma, BoltcasterSM, Homingbolt, ImpactDamageSigma, ImpactDamageTau, ImpactDamageTheta,
+              ImpactDamageOmega, PlasmaClipSigma, PlasmaClipTau, PlasmaClipTheta, RapidfireSigma, RapidfireTau, RapidfireTheta,
+              RecoilSigma, RecoilTau, RecoilTheta,ReloadSigma, ReloadTau, ReloadTheta,RicochetSigma, RicochetTau, RicochetTheta,
+              Shortburst, Wideshot]
+Grenade = [PlasmaLauncher, DamageRadius, DamageRadiusTau, Homing, IntensitySigma, IntensityTau, IntensityTheta,
+           Propulsion, PropulsionTau, Rebound, ReboundTau, RangeBoostSigma, RangeBoostTau]
+ToolScan = [AnalysisVisor, Scanner, ScanRangeBoostSigma, ScanRangeBoostTau]
 
 Multitool = [Laser, Projectile, Grenade, ToolScan]
 
