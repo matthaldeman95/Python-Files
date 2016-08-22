@@ -87,25 +87,41 @@ class RecipeWindow(Frame):
         self.mt = Checkbutton(self.frame, text='Multi-tool Upgrades', variable=self.mult, command=self.refresh)
         self.mt.select()
         """
-        self.technologycomponents = [r for r in TechnologyComponents]
-        self.techcomp = IntVar()
-
-
+        self.spec = IntVar()
+        self.technocompon = [r for r in TechnologyComponents]
         self.energysources = [r for r in EnergySources]
+        self.techcomp = IntVar()
         self.energys = IntVar()
 
-
-        self.exosuit = [r for r in Exosuit]
         self.exos = IntVar()
+        self.exohealth = [r for r in Health]
+        self.exoprot = [r for r in Protection]
+        self.exostamina = [r for r in Stamina]
+        self.exoutil = [r for r in Utilities]
+        self.health = IntVar()
+        self.protection = IntVar()
+        self.stamina = IntVar()
+        self.utilities = IntVar()
 
-
-        self.shipups = [r for r in Ship]
         self.ship = IntVar()
+        self.weapons = [r for r in Weapons]
+        self.weaponsvar = IntVar()
+        self.shiphealth = [r for r in ShipHealth]
+        self.shiphealthvar = IntVar()
+        self.scan = [r for r in ShipScan]
+        self.scanvar = IntVar()
+        self.hyper = [r for r in Hyperdrive]
+        self.hypervar = IntVar()
 
-
-        self.multitool = [r for r in Multitool]
-        self.mult = IntVar()
-
+        self.multitool = IntVar()
+        self.laser = [r for r in Laser]
+        self.laservar = IntVar()
+        self.proj = [r for r in Projectile]
+        self.projvar = IntVar()
+        self.grenade = [r for r in Grenade]
+        self.grenadevar = IntVar()
+        self.toolscan = [r for r in ToolScan]
+        self.toolscanvar = IntVar()
 
         self.generate()
 
@@ -121,54 +137,75 @@ class RecipeWindow(Frame):
 
         self.generate()
 
-
-
-
-    def updater(self, master, group, n):
-        for rec in range(len(group)):
-            c = 2
-            makerec = group[rec].canMake(inventory)
-            color = 'red'
-            if makerec == True:
-                color = 'green'
-            #buttons = {}
-            Label(self.frame, text=group[rec].name, fg=color).grid(row=n, column=0, sticky=W)
-            Label(self.frame, text='            ').grid(row=n, column=1, sticky=W)
-            #buttons['%s'%group[rec].name] = (Button(self.frame, text='Make', command=lambda: self.make(group[rec].name)).grid(row=n, column=10))
-            for el in range(len(group[rec].elements)):
+    def subgroupupdater(self, master, subgroup, n, name, var):
+        if var:
+            for item in range(len(subgroup)):
+                c = 2
+                i = subgroup[item]
+                makerec = i.canMake(inventory)
                 color = 'red'
-                make = group[rec].canMakeInd(inventory, group[rec].elements[el][0], el)
-                if make == True:
+                n += 1
+                if makerec == True:
                     color = 'green'
-                string1 = group[rec].elements[el][0] + ' : '
-                string2 = str(inventory[group[rec].elements[el][0]]) + '/' + str(group[rec].elements[el][1]) + '      '
-                Label(self.frame, text=string1, fg=color).grid(row=n, column=c, sticky=W)
-                Label(self.frame, text=string2, fg=color).grid(row=n, column=c + 1, sticky=W)
-                c += 2
-            n += 1
+                Label(self.frame, text=i.name, fg=color).grid(row=n, column=0, sticky=W)
+                Label(self.frame, text='            ').grid(row=n, column=1, sticky=W)
+
+                for el in range(len(i.elements)):
+                    color = 'red'
+                    make = i.canMakeInd(inventory, i.elements[el][0], el)
+                    if make == True:
+                        color = 'green'
+                    string1 = i.elements[el][0] + ' : '
+                    string2 = str(inventory[i.elements[el][0]]) + '/' + str(i.elements[el][1]) + '      '
+                    Label(self.frame, text=string1, fg=color).grid(row=n, column=c, sticky=W)
+                    Label(self.frame, text=string2, fg=color).grid(row=n, column=c + 1, sticky=W)
+                    c += 2
         return n
+
+
 
     def update(self):
         n = 0
-        if self.techcomp.get():
-            Label(self.frame, text='Technology Components', fg='blue', font=self.customFont).grid(row=n, column=0, sticky=W)
-            n = self.updater(self.frame,self.technologycomponents, n+1)
 
-        if self.energys.get():
-            Label(self.frame, text='Energy Sources', fg='blue', font=self.customFont).grid(row=n, column=0, sticky=W)
-            n = self.updater(self.frame,self.energysources, n+1)
+        if self.spec.get():
+            Label(self.frame, text='Special Parts', fg='blue', font=self.customFont).grid(row=n, column=0, sticky=W)
+            Checkbutton(self.frame, text='Technology Components', variable=self.techcomp, command=self.refresh).grid(row=n+1, column=0)
+            n = self.subgroupupdater(self.frame,self.technocompon, n+1, 'Technology Components', self.techcomp.get())
+            Checkbutton(self.frame, text='Energy Sources', variable=self.energys, command=self.refresh).grid(row=n+1, column=0)
+            n = self.subgroupupdater(self.frame,self.energysources, n+1, 'Energy Sources', self.energys.get())
 
         if self.exos.get():
             Label(self.frame, text='Exosuit Upgrades', fg='blue', font=self.customFont).grid(row=n, column=0, sticky=W)
-            n = self.updater(self.frame, self.exosuit, n + 1)
+            Checkbutton(self.frame, text='Health', variable = self.health, command = self.refresh).grid(row=n+1,column=0)
+            n = self.subgroupupdater(self.frame, self.exohealth, n+1, 'Health', self.health.get())
+            Checkbutton(self.frame, text='Protection', variable = self.protection, command = self.refresh).grid(row=n+1,column=0)
+            n = self.subgroupupdater(self.frame, self.exoprot, n+1, 'Protection', self.protection.get())
+            Checkbutton(self.frame, text='Stamina', variable = self.stamina, command = self.refresh).grid(row=n+1,column=0)
+            n = self.subgroupupdater(self.frame, self.exostamina, n+1, 'Stamina', self.stamina.get())
+            Checkbutton(self.frame, text='Utilities', variable = self.utilities, command = self.refresh).grid(row=n+1,column=0)
+            n = self.subgroupupdater(self.frame, self.exoutil, n+1, 'Utilities', self.utilities.get())
 
         if self.ship.get():
             Label(self.frame, text='Ship Upgrades', fg='blue', font=self.customFont).grid(row=n, column=0, sticky=W)
-            n = self.updater(self.frame, self.shipups, n + 1)
+            Checkbutton(self.frame, text='Weapons', variable=self.weaponsvar, command=self.refresh).grid(row=n+1,column=0)
+            n = self.subgroupupdater(self.frame, self.weapons, n+1, 'Weapons', self.weaponsvar.get())
+            Checkbutton(self.frame, text='Health', variable=self.shiphealthvar, command=self.refresh).grid(row=n+1,column=0)
+            n = self.subgroupupdater(self.frame, self.shiphealth, n+1, 'Health', self.shiphealthvar.get())
+            Checkbutton(self.frame, text='Scan', variable=self.scanvar, command=self.refresh).grid(row=n+1,column=0)
+            n = self.subgroupupdater(self.frame, self.scan, n+1, 'Scan', self.scanvar.get())
+            Checkbutton(self.frame, text='Hyperdrive', variable=self.hypervar, command=self.refresh).grid(row=n+1,column=0)
+            n = self.subgroupupdater(self.frame, self.hyper, n+1, 'Hyperdrive', self.hypervar.get())
 
-        if self.mult.get():
+        if self.multitool.get():
             Label(self.frame, text='Multi-tool Upgrades', fg='blue', font=self.customFont).grid(row=n, column=0, sticky=W)
-            n = self.updater(self.frame, self.multitool, n + 1)
+            Checkbutton(self.frame, text='Laser', variable=self.laservar, command=self.refresh).grid(row=n+1,column=0)
+            n = self.subgroupupdater(self.frame, self.laser, n+1, 'Laser', self.laservar.get())
+            Checkbutton(self.frame, text='Projectile', variable=self.projvar, command=self.refresh).grid(row=n+1,column=0)
+            n = self.subgroupupdater(self.frame, self.proj, n+1, 'Projectile', self.projvar.get())
+            Checkbutton(self.frame, text='Grenade', variable=self.grenadevar, command=self.refresh).grid(row=n+1,column=0)
+            n = self.subgroupupdater(self.frame, self.grenade, n+1, 'Grenade', self.grenadevar.get())
+            Checkbutton(self.frame, text='Scan', variable=self.toolscanvar, command=self.refresh).grid(row=n+1,column=0)
+            n = self.subgroupupdater(self.frame, self.toolscan, n+1, 'Scan', self.toolscanvar.get())
 
     def make(self, element):
         print "Creating", element
@@ -185,7 +222,7 @@ class RecipeWindow(Frame):
         self.canvas.create_window((4, 4), window=self.frame, anchor='nw', tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
 
-        self.tc = Checkbutton(self.frame, text='Technology Components', variable=self.techcomp, command=self.refresh)
+        self.tc = Checkbutton(self.frame, text='Special Parts', variable=self.spec, command=self.refresh)
         #self.tc.select()
 
         self.es = Checkbutton(self.frame, text='Energy Sources', variable=self.energys, command=self.refresh)
@@ -197,11 +234,11 @@ class RecipeWindow(Frame):
         self.sh = Checkbutton(self.frame, text='Ship Upgrades', variable=self.ship, command=self.refresh)
         #self.sh.select()
 
-        self.mt = Checkbutton(self.frame, text='Multi-tool Upgrades', variable=self.mult, command=self.refresh)
+        self.mt = Checkbutton(self.frame, text='Multi-tool Upgrades', variable=self.multitool, command=self.refresh)
         #self.mt.select()
 
         self.tc.grid(row=0, column=10)
-        self.es.grid(row=1, column=10)
+        #self.es.grid(row=1, column=10)
         self.ex.grid(row=2, column=10)
         self.sh.grid(row=3, column=10)
         self.mt.grid(row=4, column=10)
@@ -281,25 +318,7 @@ def getInventory():
 
 
 
-CariteSheet = Recipe('Carite Sheet',('Iron',50))
-MicrodensityFabric = Recipe('Microdensity Fabric', ('Iron', 50), ('Platinum', 10))
-ElectronVapor = Recipe('Electron Vapor', ('Suspension Fluid', 1), ('Plutonium', 100))
-SuspensionFluid = Recipe('Suspension Fluid', ('Carbon', 50))
-Antimatter = Recipe('Antimatter', ('Electron Vapor', 1), ('Heridium', 50), ('Zinc', 20))
-DynamicResonator = Recipe('Dynamic Resonator', ('Antimatter', 2), ('Chrysonite', 100), ('Microdensity Fabric',4))
 
-TechnologyComponents = [CariteSheet, MicrodensityFabric, ElectronVapor,SuspensionFluid,
-           Antimatter, DynamicResonator]
-
-ShieldingShard = Recipe('Shielding Shard', ('Iron', 25))
-ShieldingPlate = Recipe('Shielding Plate', ('Iron', 50))
-PowerGel = Recipe('Power Gel', ('Carbon', 25))
-PowerCanister = Recipe('Power Canister', ('Carbon', 50))
-UnstablePlasma = Recipe('Unstable Plasma', ('Thamium9', 400), ('Plutonium', 200))
-WarpCell = Recipe('Warp Cell', ('Thamium9', 100), ('Antimatter', 1))
-
-EnergySources = [ShieldingShard, ShieldingPlate, PowerGel, PowerCanister,
-                 UnstablePlasma, WarpCell]
 
 AerationSigma = Recipe('Aeration Membrane Sigma', ('Iron', 50), ('Carbon', 100))
 AerationTau = Recipe('Aeration Membrane Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
@@ -327,15 +346,48 @@ ThermicTheta = Recipe('Thermic Layer Theta', ('Microdensity Fabric', 2), ('Elect
 ToxinSigma = Recipe('Toxin Suppressor Sigma', ('Iron', 50), ('Carbon', 100))
 ToxinTau = Recipe('Toxin Suppressor Tau', ('Zinc', 50), ('Carbon', 100), ('Microdensity Fabric', 1))
 
-Exosuit = [AerationSigma, AerationTau, AerationTheta, CoolantNetworkSigma, CoolantNetworkTau, CoolantNetworkTheta,
-           HealthSigma, HealthTau, HealthTheta, JetpackSigma, JetpackTheta, LifeSupportSigma,
-           RadiationSigma, RadiationTau, RadiationTheta, ShieldboostSigma, ShieldboostTau, ShieldboostTheta,
-           StaminaSigma, StaminaTheta, ThermicSigma, ThermicTau, ThermicTheta,
-           ToxinSigma, ToxinTau]
 
-Ship = []
+Health = []
+Protection = []
+Stamina = []
+Utilities = []
+Exosuit = [Health, Protection, Stamina, Utilities]
 
-Multitool = []
+Weapons = []
+ShipHealth = []
+ShipScan = []
+Hyperdrive = []
+
+Ship = [Weapons, ShipHealth, ShipScan, Hyperdrive]
+
+Laser = []
+Projectile = []
+Grenade = []
+ToolScan = []
+
+Multitool = [Laser, Projectile, Grenade, ToolScan]
+
+CariteSheet = Recipe('Carite Sheet',('Iron',50))
+MicrodensityFabric = Recipe('Microdensity Fabric', ('Iron', 50), ('Platinum', 10))
+ElectronVapor = Recipe('Electron Vapor', ('Suspension Fluid', 1), ('Plutonium', 100))
+SuspensionFluid = Recipe('Suspension Fluid', ('Carbon', 50))
+Antimatter = Recipe('Antimatter', ('Electron Vapor', 1), ('Heridium', 50), ('Zinc', 20))
+DynamicResonator = Recipe('Dynamic Resonator', ('Antimatter', 2), ('Chrysonite', 100), ('Microdensity Fabric',4))
+
+TechnologyComponents = [CariteSheet, MicrodensityFabric, ElectronVapor,SuspensionFluid,
+           Antimatter, DynamicResonator]
+
+ShieldingShard = Recipe('Shielding Shard', ('Iron', 25))
+ShieldingPlate = Recipe('Shielding Plate', ('Iron', 50))
+PowerGel = Recipe('Power Gel', ('Carbon', 25))
+PowerCanister = Recipe('Power Canister', ('Carbon', 50))
+UnstablePlasma = Recipe('Unstable Plasma', ('Thamium9', 400), ('Plutonium', 200))
+WarpCell = Recipe('Warp Cell', ('Thamium9', 100), ('Antimatter', 1))
+
+EnergySources = [ShieldingShard, ShieldingPlate, PowerGel, PowerCanister,
+                 UnstablePlasma, WarpCell]
+
+Special = [TechnologyComponents, EnergySources]
 
 getInventory()
 root = Tk()
