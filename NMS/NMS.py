@@ -21,7 +21,7 @@ class InventoryWindow:
             self.keys[key][1].grid(row=n, column=3)
             self.keys[key][1].insert(0, inventory[self.keys[key][0]])
             n += 1
-        Label(master, text='Add/Remove Entry: ').grid(row=n,column=0, sticky=W)
+        Label(master, text='Command Line: ').grid(row=n,column=0, sticky=W)
         self.textfield = Entry(master)
         self.textfield.grid(row=n,column=1,sticky=W)
         self.button = Button(
@@ -29,7 +29,6 @@ class InventoryWindow:
         )
         self.button.grid(row=n+1,column=1)
         master.bind('<Return>',self.returnKey)
-        #master.bind('<Escape>',self.escapeKey)
         self.destbutton = Button(
             master, text='Close', fg='red', command=self.quitAll
         )
@@ -37,19 +36,45 @@ class InventoryWindow:
 
     def returnKey(self,event):
         if self.textfield.get():
-            instruction, quantity, item = self.textfield.get().strip().split(' ')
-            self.textfield.delete(0, END)
-            for el in sorted(inventory.iteritems()):
-                if item.lower() in el[0].lower():
-                    item = el[0]
-            if 'A'.lower() in instruction.lower():
-                inventory[item] += int(quantity)
-            elif 'R'.lower() in instruction.lower():
-                inventory[item] -= int(quantity)
-            for key in range(len(self.keys)):
-                if item == self.keys[key][0]:
-                    self.keys[key][1].delete(0,END)
-                    self.keys[key][1].insert(0,inventory[item])
+            data = []
+            data = self.textfield.get().strip().split(' ')
+
+            if 'A'.lower() in data[0].lower() or 'R'.lower() in data[0].lower():
+                for el in sorted(inventory.iteritems()):
+                    if data[2].lower() in el[0].lower():
+                        item = el[0]
+                if 'A'.lower() in data[0].lower():
+                    inventory[item] += int(data[1])
+                elif 'R'.lower() in data[0].lower():
+                    inventory[item] -= int(data[1])
+                for key in range(len(self.keys)):
+                    if item == self.keys[key][0]:
+                        self.keys[key][1].delete(0, END)
+                        self.keys[key][1].insert(0, inventory[item])
+            elif 'B'.lower() in data[0]:
+                for rec in Recipes:
+                    if data[1].lower() in rec.name.lower():
+                        if rec.canMake(inventory):
+                            inventory[rec.name] += 1
+                            for el in rec.elements:
+                                inventory[el[0]] -= el[1]
+                                for key in range(len(self.keys)):
+                                    if el[0] == self.keys[key][0]:
+                                        self.keys[key][1].delete(0, END)
+                                        self.keys[key][1].insert(0, inventory[el[0]])
+            elif 'P'.lower() in data[0]:
+                stri = ""
+                for words in range(1,len(data)):
+                    stri += data[words]
+                    stri += " "
+                for rec in Recipes:
+                    if stri.lower().strip() in rec.name.lower():
+                        rec.pinned = not rec.pinned
+
+        for key in range(len(self.keys)):
+            self.keys[key][1].delete(0, END)
+            self.keys[key][1].insert(0, inventory[self.keys[key][0]])
+        self.textfield.delete(0, END)
         self.updateInventory()
         RecipeWindow.refresh(RW)
 
@@ -165,50 +190,69 @@ class RecipeWindow(Frame):
 
 
     def update(self):
-        n = 0
+        Label(self.frame, text='Pinned Recipes', fg='blue', font=self.customFont).grid(row=0, column=0, sticky=W)
+        n = 1
+        for rec in Recipes:
+            c = 2
+            if rec.pinned == True:
+                makerec = rec.canMake(inventory)
+                color = 'red'
+                if makerec == True:
+                    color = 'green'
+                Label(self.frame, text=rec.name, fg=color).grid(row=n, column=0, sticky=W)
+                Label(self.frame, text='            ').grid(row=n, column=1, sticky=W)
+
+                for el in range(len(rec.elements)):
+                    color = 'red'
+                    make = rec.canMakeInd(inventory, rec.elements[el][0], el)
+                    if make == True:
+                        color = 'green'
+                    string1 = rec.elements[el][0] + ' : '
+                    string2 = str(inventory[rec.elements[el][0]]) + '/' + str(rec.elements[el][1]) + '      '
+                    Label(self.frame, text=string1, fg=color).grid(row=n, column=c, sticky=W)
+                    Label(self.frame, text=string2, fg=color).grid(row=n, column=c + 1, sticky=W)
+                    c += 2
+                n += 1
 
         if self.spec.get():
-            Label(self.frame, text='Special Parts', fg='blue', font=self.customFont).grid(row=n, column=0, sticky=W)
-            Checkbutton(self.frame, text='Technology Components', variable=self.techcomp, command=self.refresh).grid(row=n+1, column=0)
-            n = self.subgroupupdater(self.frame,self.technocompon, n+1, 'Technology Components', self.techcomp.get())
-            Checkbutton(self.frame, text='Energy Sources', variable=self.energys, command=self.refresh).grid(row=n+1, column=0)
+            Label(self.frame, text='Special Parts', fg='blue', font=self.customFont).grid(row=n+2, column=0, sticky=W)
+            Checkbutton(self.frame, text='Technology Components', variable=self.techcomp, command=self.refresh).grid(row=n+3, column=0,sticky=W)
+            n = self.subgroupupdater(self.frame,self.technocompon, n+3, 'Technology Components', self.techcomp.get())
+            Checkbutton(self.frame, text='Energy Sources', variable=self.energys, command=self.refresh).grid(row=n+1, column=0, sticky=W)
             n = self.subgroupupdater(self.frame,self.energysources, n+1, 'Energy Sources', self.energys.get())
 
         if self.exos.get():
-            Label(self.frame, text='Exosuit Upgrades', fg='blue', font=self.customFont).grid(row=n, column=0, sticky=W)
-            Checkbutton(self.frame, text='Health', variable = self.health, command = self.refresh).grid(row=n+1,column=0)
-            n = self.subgroupupdater(self.frame, self.exohealth, n+1, 'Health', self.health.get())
-            Checkbutton(self.frame, text='Protection', variable = self.protection, command = self.refresh).grid(row=n+1,column=0)
+            Label(self.frame, text='Exosuit Upgrades', fg='blue', font=self.customFont).grid(row=n+2, column=0, sticky=W)
+            Checkbutton(self.frame, text='Health', variable = self.health, command = self.refresh).grid(row=n+3,column=0, sticky=W)
+            n = self.subgroupupdater(self.frame, self.exohealth, n+3, 'Health', self.health.get())
+            Checkbutton(self.frame, text='Protection', variable = self.protection, command = self.refresh).grid(row=n+1,column=0, sticky=W)
             n = self.subgroupupdater(self.frame, self.exoprot, n+1, 'Protection', self.protection.get())
-            Checkbutton(self.frame, text='Stamina', variable = self.stamina, command = self.refresh).grid(row=n+1,column=0)
+            Checkbutton(self.frame, text='Stamina', variable = self.stamina, command = self.refresh).grid(row=n+1,column=0, sticky=W)
             n = self.subgroupupdater(self.frame, self.exostamina, n+1, 'Stamina', self.stamina.get())
-            Checkbutton(self.frame, text='Utilities', variable = self.utilities, command = self.refresh).grid(row=n+1,column=0)
+            Checkbutton(self.frame, text='Utilities', variable = self.utilities, command = self.refresh).grid(row=n+1,column=0, sticky=W)
             n = self.subgroupupdater(self.frame, self.exoutil, n+1, 'Utilities', self.utilities.get())
 
         if self.ship.get():
-            Label(self.frame, text='Ship Upgrades', fg='blue', font=self.customFont).grid(row=n, column=0, sticky=W)
-            Checkbutton(self.frame, text='Weapons', variable=self.weaponsvar, command=self.refresh).grid(row=n+1,column=0)
-            n = self.subgroupupdater(self.frame, self.weapons, n+1, 'Weapons', self.weaponsvar.get())
-            Checkbutton(self.frame, text='Health', variable=self.shiphealthvar, command=self.refresh).grid(row=n+1,column=0)
+            Label(self.frame, text='Ship Upgrades', fg='blue', font=self.customFont).grid(row=n+2, column=0, sticky=W)
+            Checkbutton(self.frame, text='Weapons', variable=self.weaponsvar, command=self.refresh).grid(row=n+3,column=0, sticky=W)
+            n = self.subgroupupdater(self.frame, self.weapons, n+3, 'Weapons', self.weaponsvar.get())
+            Checkbutton(self.frame, text='Health', variable=self.shiphealthvar, command=self.refresh).grid(row=n+1,column=0, sticky=W)
             n = self.subgroupupdater(self.frame, self.shiphealth, n+1, 'Health', self.shiphealthvar.get())
-            Checkbutton(self.frame, text='Scan', variable=self.scanvar, command=self.refresh).grid(row=n+1,column=0)
+            Checkbutton(self.frame, text='Scan', variable=self.scanvar, command=self.refresh).grid(row=n+1,column=0, sticky=W)
             n = self.subgroupupdater(self.frame, self.scan, n+1, 'Scan', self.scanvar.get())
-            Checkbutton(self.frame, text='Hyperdrive', variable=self.hypervar, command=self.refresh).grid(row=n+1,column=0)
+            Checkbutton(self.frame, text='Hyperdrive', variable=self.hypervar, command=self.refresh).grid(row=n+1,column=0, sticky=W)
             n = self.subgroupupdater(self.frame, self.hyper, n+1, 'Hyperdrive', self.hypervar.get())
 
         if self.multitool.get():
-            Label(self.frame, text='Multi-tool Upgrades', fg='blue', font=self.customFont).grid(row=n, column=0, sticky=W)
-            Checkbutton(self.frame, text='Laser', variable=self.laservar, command=self.refresh).grid(row=n+1,column=0)
-            n = self.subgroupupdater(self.frame, self.laser, n+1, 'Laser', self.laservar.get())
-            Checkbutton(self.frame, text='Projectile', variable=self.projvar, command=self.refresh).grid(row=n+1,column=0)
+            Label(self.frame, text='Multi-tool Upgrades', fg='blue', font=self.customFont).grid(row=n+2, column=0, sticky=W)
+            Checkbutton(self.frame, text='Laser', variable=self.laservar, command=self.refresh).grid(row=n+3,column=0, sticky=W)
+            n = self.subgroupupdater(self.frame, self.laser, n+3, 'Laser', self.laservar.get())
+            Checkbutton(self.frame, text='Projectile', variable=self.projvar, command=self.refresh).grid(row=n+1,column=0, sticky=W)
             n = self.subgroupupdater(self.frame, self.proj, n+1, 'Projectile', self.projvar.get())
-            Checkbutton(self.frame, text='Grenade', variable=self.grenadevar, command=self.refresh).grid(row=n+1,column=0)
+            Checkbutton(self.frame, text='Grenade', variable=self.grenadevar, command=self.refresh).grid(row=n+1,column=0, sticky=W)
             n = self.subgroupupdater(self.frame, self.grenade, n+1, 'Grenade', self.grenadevar.get())
-            Checkbutton(self.frame, text='Scan', variable=self.toolscanvar, command=self.refresh).grid(row=n+1,column=0)
+            Checkbutton(self.frame, text='Scan', variable=self.toolscanvar, command=self.refresh).grid(row=n+1,column=0, sticky=W)
             n = self.subgroupupdater(self.frame, self.toolscan, n+1, 'Scan', self.toolscanvar.get())
-
-    def make(self, element):
-        print "Creating", element
 
     def generate(self):
         Frame.__init__(self, self.master)
@@ -237,11 +281,11 @@ class RecipeWindow(Frame):
         self.mt = Checkbutton(self.frame, text='Multi-tool Upgrades', variable=self.multitool, command=self.refresh)
         #self.mt.select()
 
-        self.tc.grid(row=0, column=10)
+        self.tc.grid(row=0, column=10, sticky=W)
         #self.es.grid(row=1, column=10)
-        self.ex.grid(row=2, column=10)
-        self.sh.grid(row=3, column=10)
-        self.mt.grid(row=4, column=10)
+        self.ex.grid(row=2, column=10, sticky=W)
+        self.sh.grid(row=3, column=10, sticky=W)
+        self.mt.grid(row=4, column=10, sticky=W)
 
         self.update()
 
@@ -250,6 +294,7 @@ class Recipe:
     def __init__(self, name, element1, *args):
         self.name = name
         self.elements = [element1]
+        self.pinned = False
         for arg in args:
             self.elements.append(arg)
 
@@ -266,6 +311,12 @@ class Recipe:
         else:
             return True
         return
+
+    def build(self):
+        if self.canMake(inventory):
+            for el in range(len(self.elements)):
+                element = self.elements[el][0]
+                inventory['%s'%element] -= self.elements[el][1]
 
 
 inventory = {'Iron': 0,
@@ -493,6 +544,35 @@ EnergySources = [ShieldingShard, ShieldingPlate, PowerGel, PowerCanister,
                  UnstablePlasma, WarpCell]
 
 Special = [TechnologyComponents, EnergySources]
+
+Recipes = [HealthSigma, HealthTau, HealthTheta, ShieldboostSigma, ShieldboostTau,
+           ShieldboostTheta, CoolantNetworkSigma, CoolantNetworkTau, CoolantNetworkTheta,
+           RadiationSigma, RadiationTau, RadiationTheta, ThermicSigma, ThermicTau,
+           ThermicTheta, ToxinSigma, ToxinTau, AerationSigma, AerationTau, AerationTheta,
+           StaminaSigma, StaminaTau, StaminaTheta, JetpackSigma, JetpackTau, JetpackTheta,
+           LifeSupportSigma, LifeSupportTau, AcceleratedFireTau, AcceleratedFireSigma,
+           AcceleratedFireTheta, AdvancedCoolingSigma, AdvancedCoolingTau,
+           AdvancedCoolingTheta, BeamImpactSigma, BeamImpactTau, BeamImpactTheta,
+           CannonDamageSigma, CannonDamageTau, CannonDamageTheta, PhaseBeam,
+           PhaseCoolantSigma, PhaseCoolantTau, PhaseCoolantTheta, DeflectionEnhancementSigma,
+           DeflectionEnhancementTau, DeflectionEnhancementTheta, PulseJetTau,
+           PulseJetSigma, WarpReactorSigma, WarpReactorTau, WarpReactorSigma, PhotonixCore,
+           BeamCoolantSigma, BeamCoolantTau, BeamCoolantTheta,BeamFocusSigma, BeamFocusTau,
+           BeamFocusTheta, BeamIntensifierSigma, BeamIntensifierTau, BeamIntensifierTheta,
+           CombatAmpSigma, CombatAmpTau, CombatAmpTheta, CombatAmpOmega, Railshot, Boltcaster,
+           BoltcasterClipSigma, BoltcasterSM, Homingbolt, ImpactDamageSigma, ImpactDamageTau,
+           ImpactDamageTheta, ImpactDamageOmega, PlasmaClipSigma, PlasmaClipTau,
+           PlasmaClipTheta, RapidfireSigma, RapidfireTau, RapidfireTheta, RecoilSigma,
+           RecoilTau, RecoilTheta,ReloadSigma, ReloadTau, ReloadTheta,RicochetSigma,
+           RicochetTau, RicochetTheta, Shortburst, Wideshot, PlasmaLauncher, DamageRadius,
+           DamageRadiusTau, Homing, IntensitySigma, IntensityTau, IntensityTheta,
+           Propulsion, PropulsionTau, Rebound, ReboundTau, RangeBoostSigma, RangeBoostTau,
+           AnalysisVisor, Scanner, ScanRangeBoostSigma, ScanRangeBoostTau, CariteSheet,
+           MicrodensityFabric, ElectronVapor,SuspensionFluid, Antimatter, DynamicResonator,
+           ShieldingShard, ShieldingPlate, PowerGel, PowerCanister, UnstablePlasma, WarpCell]
+
+
+
 
 getInventory()
 root = Tk()
