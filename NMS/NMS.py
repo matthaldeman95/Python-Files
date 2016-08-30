@@ -56,6 +56,14 @@ class InventoryWindow:
                 for words in range(1, len(data)):
                     stri += data[words]
                     stri += " "
+                try:
+                    inventory[stri.strip()] += 1
+                    for key in range(len(self.keys)):
+                        if self.keys[key][0] == stri.strip():
+                            self.keys[key][1].delete(0, END)
+                            self.keys[key][1].insert(0, inventory[stri.strip()])
+                except KeyError:
+                    pass
                 for rec in Recipes:
                     if stri.lower().strip() in rec.name.lower():
                         if rec.canMake(inventory):
@@ -67,6 +75,7 @@ class InventoryWindow:
                                     if el[0] == self.keys[key][0]:
                                         self.keys[key][1].delete(0, END)
                                         self.keys[key][1].insert(0, inventory[el[0]])
+
             elif 'P'.lower() in data[0]:
                 stri = ""
                 for words in range(1,len(data)):
@@ -458,7 +467,6 @@ BeamFocusTheta = Recipe('Beam Focus Theta', ('Plutonium', 50), ('Chrysonite', 20
 BeamIntensifierSigma = Recipe('Beam Intensifier Sigma', ('Titanium', 30), ('Plutonium', 25))
 BeamIntensifierTau = Recipe('Beam Intensifier Tau', ('Copper', 60), ('Iron', 200))
 BeamIntensifierTheta = Recipe('Beam Intensifier Theta', ('Copper', 120), ('Iron', 100), ('Iridium', 100))
-#BeamIntensifierTheta = Recipe('Beam Intensifier Theta', ('Copper', 120), ('Iron', 100), 'Iridium', 100)
 CombatAmpSigma = Recipe('Combat Amplifier Sigma', ('Titanium', 30), ('Carbon', 30))
 CombatAmpTau = Recipe('Combat Amplifier Tau', ('Platinum', 200), ('Titanium', 50), ('Chrysonite', 50))
 CombatAmpTheta = Recipe('Combat Amplifier Theta', ('Heridium', 400), ('Iron', 200), ('Radnox', 20))
